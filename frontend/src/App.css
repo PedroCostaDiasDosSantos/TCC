@@ -1,23 +1,25 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-.roxo{
+.roxo {
 
-  img{
+  img {
     width: 850px;
   }
 
 }
 
-.logo{
-  display: flex;
-    justify-content: space-between;
+.logo {
 
-  img{
+
+  img {
     width: 500px;
+    display: flex;
+    justify-content: space-between;
     
   }
+
 }
