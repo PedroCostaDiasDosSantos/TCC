@@ -2,24 +2,67 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Helvetica;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .roxo {
+  margin-left: -250px;
 
   img {
-    width: 850px;
+    width: 1100px;
   }
 
 }
 
-.logo {
+.container{
+  display: flex;
+  justify-content: center;
 
-
-  img {
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
-    
+  form{
+    margin-top: 120px;
   }
 
+  h1{
+    font-size: 60px;
+  }
+
+  .User{
+    width: 150px;
+  }
+}
+
+.container .input-field{
+  position: relative;
+  width: 100%;
+  height: 35px;
+  margin: 30px auto;
+}
+
+.input-field input{
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+
+  outline: none;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.input-field input::placeholder{
+  color: white;
+}
+
+
+.container .recall-forget{
+  display: flex;
+  justify-content: space-between;
+
+  color: #940909;
 }
