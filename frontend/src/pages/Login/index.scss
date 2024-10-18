@@ -13,7 +13,10 @@
   }
   
   .roxo {
-    margin-left: -250px;
+    margin-left: -800px;
+
+    position: absolute;
+    
   
     img {
       width: 100%;
@@ -27,15 +30,19 @@
   
     form{
       margin-top: 120px;
+      margin-left: 780px;
     }
   
     h1{
       font-size: 5vh;
+      margin-left: 25px;
     }
   
     .User{
       width: 150px;
-  
+
+      margin-left: 85px;
+      margin-top: 50px;
     }
   }
   
@@ -43,7 +50,7 @@
     position: relative;
     width: 100%;
     height: 35px;
-    margin: 45px auto;
+    margin: 65px auto;
   }
   
   .input-field input{
@@ -64,7 +71,36 @@
   .container .recall-forget{
     display: flex;
     justify-content: space-between;
-  
+    font-size: 14.5px;
+    margin: -15px 0 30px;
+  }
+
+  .recall-forget input{
+    margin-right: 5px;
+  }
+
+  .recall-forget a{
     color: #940909;
+    text-decoration: none;
+  }
+
+  .recall-forget a:hover{
+    text-decoration: underline;
+  }
+
+  .container button{
+    width: 80px;
+    height: 30px;
+
+    background-color: #2D1E3D;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
   }
   
+  .zap{
+    position: fixed;
+    margin-top: 830px;
+  }

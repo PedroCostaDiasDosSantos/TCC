@@ -17,20 +17,20 @@ export default function Login() {
     <div className='App'>
       <div className='container'>
         <div className='roxo'>
-          <img src='/assets/images/Group2.png' alt='a'/>
+          <img src='/assets/images/roxo.png' alt='a' />
         </div>
         <form onSubmit={handleSubmit}>
           <h1>Bem Vindo(a)</h1>
-          <img className='User' src='/assets/images/user.png' alt='a'/>
+          <img className='User' src='/assets/images/user.png' alt='a' />
           <div className='input-field'>
             <h3>Insira seu email ou numero de celular:</h3>
-            <input type='login' placeholder='' 
-            onChange={(e) => setLogin(e.target.value)} />
+            <input type='login' placeholder=''
+              onChange={(e) => setLogin(e.target.value)} />
           </div>
           <div className='input-field'>
             <h3>Senha:</h3>
             <input type='password' placeholder=''
-            onChange={(e) => setSenha(e.target.value)} />
+              onChange={(e) => setSenha(e.target.value)} />
           </div>
 
           <div className='recall-forget'>
@@ -38,12 +38,15 @@ export default function Login() {
               <input type='checkbox' />
               Lembre de mim
             </label>
-            <a href='/'>Esqueceu a senha</a>
+            <a href='/EsqueciaSenha'>Esqueceu a senha</a>
           </div>
-          
+
           <button>Entrar</button>
 
         </form>
+        <div>
+          <a href="https://web.whatsapp.com/"><img className='zap' src="/assets/images/zap.png" /></a> 
+        </div>
       </div>
 
     </div>
