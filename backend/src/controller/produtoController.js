@@ -1,3 +1,4 @@
+import { autenticar } from '../utils/jwt.js';
 import * as db from '../repository/produtoRepository.js'; 
 
 import {Router} from "express";
