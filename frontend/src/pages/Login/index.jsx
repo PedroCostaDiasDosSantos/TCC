@@ -1,11 +1,8 @@
-import './App.css';
-import Group1 from './assets/images/Group2.png'
-import User from './assets/images/user.png'
-import { FaUser, FaLock } from 'react-icons/fa'
+import './index.scss';
 
 import { useState } from 'react';
 
-function App() {
+export default function Login() {
 
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
@@ -20,14 +17,14 @@ function App() {
     <div className='App'>
       <div className='container'>
         <div className='roxo'>
-          <img src={Group1} />
+          <img src='/assets/images/Group2.png' alt='a'/>
         </div>
         <form onSubmit={handleSubmit}>
           <h1>Bem Vindo(a)</h1>
-          <img className='User' src={User}/>
+          <img className='User' src='/assets/images/user.png' alt='a'/>
           <div className='input-field'>
             <h3>Insira seu email ou numero de celular:</h3>
-            <input type='email' placeholder='' 
+            <input type='login' placeholder='' 
             onChange={(e) => setLogin(e.target.value)} />
           </div>
           <div className='input-field'>
@@ -41,7 +38,7 @@ function App() {
               <input type='checkbox' />
               Lembre de mim
             </label>
-            <a href='#'>Esqueceu a senha</a>
+            <a href='/'>Esqueceu a senha</a>
           </div>
           
           <button>Entrar</button>
@@ -53,5 +50,3 @@ function App() {
 
   );
 }
-
-export default App;
