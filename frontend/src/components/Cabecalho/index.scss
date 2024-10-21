@@ -1,0 +1,20 @@
+.cabecalho-container{
+    margin: 0px;
+    background-color: #2D1E3D;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    
+    .logo{
+        height: 90px;
+    }
+
+    h2{
+        color: #fff;
+        font-size: 18px;
+    }
+}

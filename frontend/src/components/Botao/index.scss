@@ -1,0 +1,30 @@
+
+.botao {
+    .button {
+        padding: 8px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .solid {
+        background-color: #fff;
+        border: #fff 2px solid;
+        color: #fff;
+    }
+
+    .outline {
+        background-color: transparent;
+        border: #fff 2px solid;
+        color: #fff;
+    }
+
+    .solid:hover {
+        background-color: #fff;
+    }
+
+    .outline:hover {
+        background-color: #fff;
+    }
+}
