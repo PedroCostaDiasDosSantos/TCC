@@ -1,4 +1,5 @@
 import { autenticar } from '../utils/jwt.js';
+import { gerarToken } from '../utils/jwt.js';
 import * as db from '../repository/loginRepository.js'; 
 
 import {Router} from "express";
@@ -10,6 +11,30 @@ endpoints.get('/adm/', async (req, resp) =>{
         resp.send(registros);
     }
     catch(err){
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+
+endpoints.post('/adm/', async (req, resp) => {
+    try {
+        let pessoa = req.body;
+
+        let usuario = await db.validarUsuario(pessoa);
+
+        if (usuario == null) {
+            resp.send({ erro: "Usuário ou senha incorreto(s)" })
+        } else {
+            let token = gerarToken(usuario);
+            resp.send({
+                "usuario": usuario,
+                "token": token
+            })
+        }
+    }
+    catch (err) {
         resp.status(400).send({
             erro: err.message
         })

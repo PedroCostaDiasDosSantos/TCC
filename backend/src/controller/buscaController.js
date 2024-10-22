@@ -4,7 +4,7 @@ import * as db from '../repository/buscaRepository.js';
 import {Router} from "express";
 const endpoints = Router();
 
-endpoints.get('/busca/', async (req, resp) =>{
+endpoints.get('/busca/', autenticar, async (req, resp) =>{
     try{
         let registros = await db.consultarBusca();
         resp.send(registros);
@@ -16,8 +16,21 @@ endpoints.get('/busca/', async (req, resp) =>{
     }
 })
 
+endpoints.get('/busca/:id', autenticar, async (req, resp) => {
+    try {
+        let id = req.params.id;
+        let registros = await db.consultarBusca(id);
+        resp.send(registros[0]);
+    }
+    catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
 
-endpoints.post('/busca/', async (req, resp) => {
+
+endpoints.post('/busca/', autenticar, async (req, resp) => {
     try {
         let busca = req.body;
 
@@ -35,7 +48,7 @@ endpoints.post('/busca/', async (req, resp) => {
 })
 
 
-endpoints.put('/busca/:id', async (req, resp) => {
+endpoints.put('/busca/:id', autenticar, async (req, resp) => {
     try {
         let id = req.params.id;
         let pessoa = req.body;
@@ -56,7 +69,7 @@ endpoints.put('/busca/:id', async (req, resp) => {
 })
 
 
-endpoints.delete('/produto/:id', async (req, resp) => {
+endpoints.delete('/produto/:id', autenticar, async (req, resp) => {
     try {
         let id = req.params.id;
 

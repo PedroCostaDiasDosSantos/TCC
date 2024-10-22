@@ -17,11 +17,26 @@ export async function consultarBusca(){
     const comando = `
         select
            nm_produto		produto,
-            ds_produto		descricacao
+            ds_produto		descricao
         from tb_busca
     `;
 
     let resposta = await con.query(comando);
+    let registros = resposta[0];
+
+    return registros;
+}
+
+export async function consultarBuscaPorId(){
+    const comando = `
+        select id_busca id,
+               nm_produto produto,
+               ds_produto descricao
+            from tb_busca
+            where id_busca = ?
+    `;
+
+    let resposta = await con.query(comando, [id]);
     let registros = resposta[0];
 
     return registros;
