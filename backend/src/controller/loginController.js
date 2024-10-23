@@ -18,7 +18,7 @@ endpoints.get('/adm/', async (req, resp) =>{
 })
 
 
-endpoints.post('/adm/', async (req, resp) => {
+endpoints.post('/entrar/', async (req, resp) => {
     try {
         let pessoa = req.body;
 

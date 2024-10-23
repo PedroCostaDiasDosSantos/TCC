@@ -1,4 +1,5 @@
 import con from "./connection.js";
+import crypto from "crypto-js";
 
 
 export async function inserirLogin(pessoa) {
@@ -6,11 +7,32 @@ export async function inserirLogin(pessoa) {
         insert into tb_adm (nm_login, ds_senha) 
 					        values (?, ?)
     `;
+
+    let hash = crypto.SHA256(pessoa.senha).toString();
     
-    let resposta = await con.query(comando, [pessoa.login, pessoa.senha])
+    let resposta = await con.query(comando, [pessoa.login, pessoa.senha, hash])
     let info = resposta[0];
     
     return info.insertId;
+}
+
+export async function validarUsuario(pessoa) {
+    const comando = `
+        select
+            id_login id,
+            nm_login nome
+        from tb_login
+        where
+            nm_login = ?
+            and ds_senha = ?    
+    `;
+
+    let hash = crypto.SHA256(pessoa.senha).toString();
+    
+    let resposta = await con.query(comando, [pessoa.login, pessoa.senha, hash])
+    let info = resposta[0];
+    
+    return info.insertId; 
 }
 
 export async function consultarLogin(){
@@ -34,8 +56,10 @@ export async function alterarLogin(id, pessoa){
                 ds_senha = ?
             where id_login = ?;  
     `;
+
+    let hash = crypto.SHA256(pessoa.senha).toString();
     
-    let resposta = await con.query(comando, [pessoa.login, pessoa.senha, id])
+    let resposta = await con.query(comando, [pessoa.login, pessoa.senha, hash, id])
     let info = resposta[0];
     
     return info.affectedRows;

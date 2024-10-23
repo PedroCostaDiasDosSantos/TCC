@@ -1,7 +1,7 @@
 import con from "./connection.js";
 
 
-export async function inserirFornecedor(senha) {
+export async function inserirSenha(senha) {
     const comando = `
         insert into tb_adm_esqueci_senha (ds_email, nmr_codigo, ds_senha_novamente, ds_senha) 
 					        values (?, ?, ?, ?)
@@ -13,7 +13,7 @@ export async function inserirFornecedor(senha) {
     return info.insertId;
 }
 
-export async function alterarFornecedor(id, senha){
+export async function alterarSenha(id, senha){
     const comando = `
         update tb_adm_esqueci_senha
             set ds_email              = ?,

@@ -1,35 +1,59 @@
 import './index.scss';
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import axios from 'axios'
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Login() {
 
   const [login, setLogin] = useState("");
   const [senha, setSenha] = useState("");
 
-  const handleSubmit = (event) => {
-    event.prevenDefault();
+  const navigate = useNavigate()
 
-    alert("Enviando" + login + " - " + senha)
-  };
+  async function entrar(e) {
+    e.preventDefault();
+
+    const usuario = {
+      "nome": login,
+      "senha": senha
+    }
+
+    const url = `http://localhost:5010/entrar/`
+    let resp = await axios.post(url, usuario)
+
+    if (resp.data.erro != undefined) {
+      toast.error(resp.data.erro)
+    } else {
+      localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario))
+      localStorage.setItem('TOKEN', resp.data.token)
+      navigate('/consultar')
+    }
+  }
 
   return (
-    <div className='App'>
+    <>
       <div className='container'>
         <div className='roxo'>
-          <img src='/assets/images/roxo.png' alt='a' />
+          <img src='/assets/images/roxooo.png' alt='a' />
         </div>
-        <form onSubmit={handleSubmit}>
+
+        <form>
+
           <h1>Bem Vindo(a)</h1>
+
           <img className='User' src='/assets/images/user.png' alt='a' />
+
           <div className='input-field'>
             <h3>Insira seu email ou numero de celular:</h3>
-            <input type='login' placeholder=''
+            <input id='login' type='login' value={login} placeholder=''
               onChange={(e) => setLogin(e.target.value)} />
           </div>
           <div className='input-field'>
             <h3>Senha:</h3>
-            <input type='password' placeholder=''
+            <input type='password' id='senha' value={senha} placeholder=''
               onChange={(e) => setSenha(e.target.value)} />
           </div>
 
@@ -41,15 +65,15 @@ export default function Login() {
             <a href='/EsqueciaSenha'>Esqueceu a senha</a>
           </div>
 
-          <button>Entrar</button>
+          <button onClick={entrar}>Entrar</button>
 
         </form>
         <div>
-          <a href="https://web.whatsapp.com/"><img className='zap' src="/assets/images/zap.png" /></a> 
+          <a href="https://web.whatsapp.com/"><img className='zap' src="/assets/images/zap.png" /></a>
         </div>
       </div>
 
-    </div>
+    </>
 
   );
 }

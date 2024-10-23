@@ -5,7 +5,7 @@ import Botao from '../../components/Botao';
 import axios from 'axios'
 
 import { useEffect, useState } from 'react';
-import { link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function Consultar() {
@@ -48,18 +48,37 @@ export default function Consultar() {
                 <h1>Consultar</h1>
 
                 <div className='botoes'>
-                    <Botao titulo='Buscar' onClick={buscar}/>
-                    <Botao titulo='Cadastrar' onClick={() => navigate('/cadastrar')}/>
+                    <Botao className='botao' titulo='Buscar' onClick={buscar}/>
+                    <Botao className='botao' titulo='Cadastrar' onClick={() => navigate('/cadastrar')}/>
                 </div>
 
                 <table>
                     <thead>
                         <th>Produto</th>
+                        <th>Valor</th>
                         <th>Descrição</th>
                         <th>Quantidade</th>
                         <th>Fornecedor</th>
                     </thead>
+
+                    <tbody>
+                        {adm.map(item =>
+                            <tr>
+                                <td>{item.produto}</td>
+                                <td>{item.valor}</td>
+                                <td>{item.descricao}</td>
+                                <td>{item.quantidade}</td>
+                                <td>{item.fornecedor}</td>
+                                <td className='acoes'>
+                                    <Link to={`/cadastrar/${item.id}`}><i class='fa-solid fa-pencil botao' /></Link>
+                                    <Link onClick={() => excluir (item.id, item.nome)}><i class='fa-solid fa-trash-can botao' /></Link>
+                                </td>
+                            </tr>
+                        )}
+                    </tbody>
                 </table>
+
+                <Toaster />
             </div>
         </>
     )

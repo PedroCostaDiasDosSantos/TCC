@@ -5,3 +5,47 @@
     font-family: Helvetica;
 }
 
+
+.pagina-consultar {
+    padding: 50px;
+
+    .botoes {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+
+        margin: 14px 0px;
+        
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        background-color: #f3f3f3;
+
+        th,
+        td {
+            border: 1px solid transparent;
+        }
+
+        th {
+            background-color: #2D1E3D;
+            color: white;
+
+            font-size: 16px;
+            text-align: left;
+            padding: 8px 8px;
+        }
+
+        td {
+            padding: 8px 8px;
+        }
+
+        .botao {
+            color: #2d1e3d;
+            font-size: 18px;
+        }
+    }
+}
