@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault();
 
     const usuario = {
-      "nome": login,
+      "login": login,
       "senha": senha
     }
 
