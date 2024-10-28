@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 17px;
-    padding: 30px 0px 20px 0px;
+    padding: 30px 0px 10px 0px;
    
     
    
@@ -14,8 +14,8 @@
         padding: 0px 0px 0px 0px;
     
         font-size: 17px;
-        padding:10px;
-        margin: 0px 0px 0px 100px;
+        padding:5px;
+        margin: 0px -20px 0px 190px;
         text-decoration: none
 
         
@@ -25,6 +25,17 @@
     
 }
 
+
+
+
+
+.fot{
+    display: flex;
+    .logo{
+        width: 1257px;
+    }
+}
+
 .nitro{
     display: flex;
     flex-direction: column;
@@ -32,19 +43,19 @@
 
     .gabriella{
         margin-top: 16px;
-        margin-left: 450px;
+        margin-left: 650px;
     }
 }
 
 #teste1{
     margin-top: 20px ;
     font-size: 25px;
-    margin-left: 480px;
+    margin-left: 509px;
 }
 
 #teste2{
     font-size: 15px;
-    margin-left: 500px;
+    margin-left: 533px;
 }
 
 #teste3{
@@ -53,7 +64,7 @@
     height: 40px;
     border: 1px solid #000;
     border-radius: 0px;
-    margin-left: 536px;
+    margin-left: 566px;
     padding-top: 11px;
     padding-left: 9px;
     font-size: 13px;
@@ -92,7 +103,7 @@
         display: flex;
         margin-top: 60px;
         margin-bottom: 80px;
-        margin-left: 100px;
+        margin-left: 120px;
         border-radius: 10px 10px 10px 10px;
     }
 
@@ -100,7 +111,7 @@
         display: flex;
         margin-top: 60px;
         margin-bottom: 70px;
-        margin-left: 130px;
+        margin-left: 180px;
         border-radius: 10px 10px 10px 10px;
     }
 
@@ -112,9 +123,12 @@
     }
 }
 
-.logo{
-    width: 1257px;
+
+.fot{
+    display: flex;
+    width: 999px;
 }
+
 
 #adaidas{
     margin-top: 500px;
@@ -162,28 +176,30 @@
 }
 
 #teste12{
-    margin-left: 120px;
+    margin-left: -550px;
     font-size: 40px;
-    margin-top: -60px;
+    margin-top: 30px;
     
 }
 
 #teste13{
-    margin-left: 320px;
+    margin-left: 210px;
     font-size: 40px;
-    margin-top: -60px;
+    margin-top: 30px;
    
 }
 
 #teste14{
-    margin-left: 250px;
+    margin-left: 240px;
     font-size: 40px;
-    margin-top: -60px;
+    margin-top: 30px;
     
 }
 
+
+
 .linhasss{
-    margin-top: 40px;
+    margin-top: 480px;
     background-color: #000;
     padding-bottom: 1px;
 }
@@ -210,22 +226,28 @@
 
 #teste15{
     margin-top: 40px;
-    margin-left: 50px;
+    margin-left: 250px;
+    font-size: 30px;
 }
 
 #teste16{
-    margin-top: 40px;
-    margin-left: 150px;
+    margin-top: 140px;
+    margin-left: 190px;
 }
 
 #teste17{
-    margin-top: 40px;
-    margin-left: 200px;
+    margin-top: 140px;
+    margin-left: 220px;
 }
 
 #teste18{
-    margin-top: 40px;
-    margin-left: 200px;
+    margin-top: 140px;
+    margin-left: 220px;
+}
+
+#teste19{
+    margin-top: 100px;
+    margin-left: 100px;
 }
 
 .name{
@@ -254,4 +276,23 @@
     font-size: 19px;
 }
 
-#sa{}
+#sa{
+
+}
+
+.logoo{
+    width: 100px;
+    margin-left: 50px;
+}
+
+.procurar{
+    margin-left: 50px;
+    padding: 6px;
+    background-color: #795D94;
+    border-color: #160527;
+}
+
+.procurar2{
+    position: absolute;
+    margin-right: 25px;
+}

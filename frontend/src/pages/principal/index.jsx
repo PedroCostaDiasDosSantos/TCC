@@ -3,18 +3,21 @@ import './index.scss';
 export default function inicial(){
     const Div1 = () => <div className='inicial'>
            
+        <img className='logoo' src="/assets/images/logo.png" alt="" />
 
         <h1>
-            <a className='link' href='#'>Lançamentos</a>
-            <a className='link' href='#'>Masculino</a>
-            <a className='link' href='#'>Feminino</a>
-            <a className='link' href='#'>Outlet</a>
+            <a className='link' id='sla1' href='#'>Lançamentos</a>
+            <a className='link' id='sla2' href='#'>Masculino</a>
+            <a className='link' id='sla3' href='#'>Feminino</a>
+
+            <input className='procurar' type="search" />
+            <img className='procurar2' src="/assets/images/procurar.png" alt="a " />
         </h1> 
          </div>
 
 
     const Div2 = () => <div className='fot'>
-            <img className='logo' src='/assets/images/logo.png.png' alt='a' /> 
+            <img className='logo' src='/assets/images/muie.png' alt='a' /> 
     </div>
 
     const Div3 = () => <div className='linha'>
@@ -24,7 +27,7 @@ export default function inicial(){
     const Div4 = () => <div className='nitro'>
         <h1 className='gabriella' id="teste1">DEVIATE NITRO™ 3</h1>
         <h2 className='gabriella' id="teste2">SINTA-SE MAIS RÁPIDO </h2>
-        <a className='gabriella'  id ="teste3" href='#'>Comprar Agora</a>
+        <a className='gabriella'  id ="teste3" href='/comprar'>Comprar Agora</a>
     </div>
 
     const Div5 = () => <div className='linhaD'>
@@ -53,8 +56,9 @@ export default function inicial(){
 
     const Div10 = () => <div className='nome'>
         <h1 className='teniss' id="teste12">Adidas</h1>
-        <h2 className='teniss' id="teste13">Nike</h2>
-        <h3 className='teniss' id="teste14">New Balance</h3>
+        <h2 className='teniss' id="teste13">Puma</h2>
+        <h2 className='teniss' id="teste14">Nike</h2>
+        <h3 className='teniss' id="teste15">New Balance</h3>
     </div>
 
     const Div11 = () => <div className='linhasss'>
@@ -69,7 +73,7 @@ export default function inicial(){
     </div>
 
     const Div14 = () => <div className='modelo'>
-         <img className='azul' id="teste15" src='/assets/images/niketnazul.png' alt='a' />
+         <img className='azul' id="teste19" src='/assets/images/niketnazul.png' alt='a' />
          <img className='milan' id="teste16" src='/assets/images/milan.png' alt='a' />
          <img className='high' id="teste17" src='/assets/images/camisetahigh.png' alt='a' />
          <img className='blusa' id="teste18" src='/assets/images/blusa.png' alt='a' />
