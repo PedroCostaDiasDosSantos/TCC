@@ -5,7 +5,7 @@ export default function inicial(){
            
         <img className='logoo' src="/assets/images/logo.png" alt="" />
 
-        <h1>
+        <h1 className='linqui'>
             <a className='link' id='sla1' href='#'>Lançamentos</a>
             <a className='link' id='sla2' href='#'>Masculino</a>
             <a className='link' id='sla3' href='#'>Feminino</a>
