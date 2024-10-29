@@ -23,7 +23,7 @@ export default function Cabecalho() {
 
             <img className='logo' src="/assets/images/logo.png" alt="" />
             
-            <h2>bem vindo, {usuario?.nome}!</h2>
+            <h2>{usuario?.nome}!</h2>
 
             <Botao titulo='Sair' onClick={sair} outline />
         </div>
