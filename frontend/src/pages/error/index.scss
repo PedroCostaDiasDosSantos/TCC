@@ -1,0 +1,30 @@
+.container-error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    margin-top: 300px;
+
+    .notfound{
+        margin-right: 30px;
+        font-size: 80px;
+    }
+    
+    .mensagem{
+        margin-right: 30px;
+        font-size: 25px;
+    }
+}
+
+
+
+.container-botao{
+    margin-left: 560px;
+    margin-top: 50px;
+
+    .um{
+        color: #2D1E3D;
+    }
+}
