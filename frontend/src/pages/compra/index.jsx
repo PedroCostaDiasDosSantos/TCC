@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './index.scss'
 
 
@@ -109,7 +110,7 @@ export default function produtos(){
 </div>
 
 const Div19 = () => <div className="voltar">
-    <img className='caldeirao' src='/assets/images/Arrow right.png' alt='a' />
+    <a href="/"><img className='caldeirao' src='/assets/images/Arrow right.png' alt='a' /></a>
 </div>
 
 const Div20 = () => <div className='outubro'>

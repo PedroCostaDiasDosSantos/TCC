@@ -11,7 +11,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #333;
+    color: transparent;
     transition: transform 0.3s ease;
   }
   
@@ -38,6 +38,7 @@
   
   .sidebar h2 {
     margin-top: 0;
+    margin-left: 150px;
   }
   
   .sidebar ul {
