@@ -68,9 +68,7 @@ export default function Login() {
           <button onClick={entrar}>Entrar</button>
 
         </form>
-        <div>
-          <a href="https://web.whatsapp.com/"><img className='zap' src="/assets/images/zap.png" /></a>
-        </div>
+        
       </div>
 
     </>

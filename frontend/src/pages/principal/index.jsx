@@ -1,6 +1,67 @@
 import './index.scss';
+import Menu from '../../components/Menu';
+import Slider from 'react-slick';
+
 
 export default function inicial(){
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
+    function NextArrow(props) {
+        const { onClick } = props;
+        return <div className="slick-arrow slick-next" onClick={onClick} />;
+    }
+
+    function PrevArrow(props) {
+        const { onClick } = props;
+        return <div className="slick-arrow slick-prev" onClick={onClick} />;
+    }
+
+    const CarrosselProdutos = () => (
+        <Slider {...settings}>
+            <div>
+                <img className="azul" src="/assets/images/niketnazul.png" alt="Tênis" />
+                <h1 className="n">Tênis</h1>
+            </div>
+            <div>
+                <img className="milan" src="/assets/images/milan.png" alt="Camisa Milan" />
+                <h2 className="time">Camisas de Time</h2>
+            </div>
+            <div>
+                <img className="high" src="/assets/images/camisetahigh.png" alt="Camiseta" />
+                <h3 className="cami">Camisetas</h3>
+            </div>
+            <div>
+                <img className="blusa" src="/assets/images/blusa.png" alt="Blusa" />
+                <h4 className="blu">Blusas</h4>
+            </div>
+        </Slider>
+    );
+
     const Div1 = () => <div className='inicial'>
            
         <img className='logoo' src="/assets/images/logo.png" alt="" />
@@ -87,7 +148,7 @@ export default function inicial(){
     </div>
     return(
         <>
-
+        
         <Div1 />
         <Div2 />
         <Div3 />

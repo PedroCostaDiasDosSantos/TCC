@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import './index.scss'
+import Menu from '../../components/Menu'
 
 
 export default function produtos(){
@@ -122,6 +123,7 @@ const Div21 = () => <div className='caminhao'>
 
 return(
     <>
+    <Menu/>
     <Div1 />
     <Div2 />
     <Div3 />   

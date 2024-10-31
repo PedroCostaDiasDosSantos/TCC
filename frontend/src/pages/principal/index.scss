@@ -1,3 +1,7 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
 .inicial{
 
     background-color: #2D1E3D;
@@ -305,6 +309,83 @@
     margin-right: 25px;
 }
 
-@media (max-width: 992px) {
-    
+@media (max-width: 1200px) {
+    .logoo {
+        width: 120px;
+        margin-left: 20px;
+    }
+    .linqui {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .nitro .gabriella {
+        font-size: 20px;
+    }
+    .parceria .parcerias {
+        margin-left: 0;
+    }
+    .marcas {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
+
+@media (max-width: 768px) {
+    .inicial {
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+    }
+    .link {
+        font-size: 15px;
+        margin: 5px;
+    }
+    .logoo {
+        width: 100px;
+    }
+    .marcas {
+        gap: 15px;
+    }
+    .produtos h1 {
+        font-size: 24px;
+    }
+    .parceria .parcerias,
+    .nitro .gabriella {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicial {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+    .link {
+        font-size: 14px;
+        margin: 5px;
+    }
+    .logoo {
+        width: 80px;
+        margin-left: 0;
+    }
+    .parcerias,
+    .gabriella,
+    .produtos h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .modelo,
+    .name,
+    .marcas {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .tenis .pisante {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+/* carrossel */
+

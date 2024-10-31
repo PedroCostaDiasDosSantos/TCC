@@ -100,3 +100,100 @@
   position: fixed;
   margin-top: 830px
 }
+
+
+/* Media Queries para Responsividade */
+
+/* Para tablets e telas menores que 1024px */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+
+    form {
+      margin-left: 0;
+    }
+  }
+
+  .roxo {
+    margin-left: -400px;
+  }
+
+  h1 {
+    font-size: 4vh;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .User {
+    margin-left: 0;
+  }
+}
+
+/* Para smartphones e telas menores que 768px */
+@media (max-width: 768px) {
+  .roxo {
+    display: none;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  form {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3.5vh;
+  }
+
+  .User {
+    width: 100px;
+    margin-top: 20px;
+  }
+
+  .input-field {
+    margin: 20px auto;
+  }
+
+  .input-field input {
+    font-size: 16px;
+  }
+
+  .recall-forget {
+    font-size: 12px;
+  }
+
+  button {
+    width: 100px;
+    height: 35px;
+  }
+}
+
+/* Para telas muito pequenas (menores que 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3vh;
+  }
+
+  .User {
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .input-field input {
+    font-size: 14px;
+  }
+
+  .recall-forget {
+    font-size: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
+  }
+}
