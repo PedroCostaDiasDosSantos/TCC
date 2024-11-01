@@ -1,15 +1,11 @@
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-
-
 .inicial{
 
     background-color: #2D1E3D;
     display: flex;
     justify-content: space-between;
     font-size: 17px;
-    padding: 30px 0px 10px 0px;
-   
+    padding: 30px 0px 60px 0px;
+    text-decoration: none;
     
    
 
@@ -20,32 +16,104 @@
         font-size: 17px;
         padding:5px;
         margin: 0px -20px 0px 190px;
-        text-decoration: none
+        text-decoration: none;
+
+        transition: color 0.3s ease, transform 0.3s ease;
 
         
+        &:hover {
+          color: #9b25b3;
+          transform: scale(1.3); 
+        }
+
+        @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+        
+          
+          animation: fadeIn 0.5s ease;
+        }
+        
+        
+        .link:active {
+          transform: scale(0.95); 
+        }
        
     }
 
+#sla1{
+    margin-top: 20px;
+    margin-left: 250px;
+}
+
+#sla2{
+    margin-left: 100px;
+}
+
+#sla3{
+    margin-left: 100px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+   
+}
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 90px;
+}
+.search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3s ease;
+    background-color: #0b4079;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.search-button:hover {
+    background-color: #2c52bd;
+}
+
+.usuario{
+    display: flex;
+    
+    margin-top: -90px;
+    
+
+    color: #573b3b;
     
 }
 
-.logoo{
+.dell{
     display: flex;
-    width: 150px;
-    margin-top: -30px;
-    margin-bottom: 10px;
-    margin-left: -90px;
+    margin-left: 1150px;
 }
 
-.linqui{
-    display: flex;
-    margin-left:-50px;
-}
-.fot{
+
+
+.fotos{
     display: flex;
     .logo{
         width: 1257px;
     }
+}
+
+.linha{
+    margin-top: 30px;
+    background-color: #000;
+    padding-bottom: 1px;
 }
 
 .nitro{
@@ -62,12 +130,12 @@
 #teste1{
     margin-top: 20px ;
     font-size: 25px;
-    margin-left: 509px;
+    margin-left: 503px;
 }
 
 #teste2{
     font-size: 15px;
-    margin-left: 533px;
+    margin-left: 525px;
 }
 
 #teste3{
@@ -76,23 +144,18 @@
     height: 40px;
     border: 1px solid #000;
     border-radius: 0px;
-    margin-left: 566px;
+    margin-left: 556px;
     padding-top: 11px;
     padding-left: 9px;
     font-size: 13px;
     text-decoration: none
+    
 
     
 }
 
-.linha{
-    margin-top: 30px;
-    background-color: #000;
-    padding-bottom: 1px;
-}
-
 .linhaD{
-    margin-top: 40px;
+    margin-top: 30px;
     background-color: #000;
     padding-bottom: 1px;
 }
@@ -104,7 +167,7 @@
         display: flex;
 
         margin-top: 50px;
-        margin-left: 550px;
+        margin-left: 536px;
     }
 }
 
@@ -115,15 +178,17 @@
         display: flex;
         margin-top: 60px;
         margin-bottom: 80px;
-        margin-left: 120px;
+        margin-left: 60px;
         border-radius: 10px 10px 10px 10px;
+        width: 150px;
+        height: auto;
     }
 
     .nike{
         display: flex;
         margin-top: 60px;
         margin-bottom: 70px;
-        margin-left: 180px;
+        margin-left: 290px;
         border-radius: 10px 10px 10px 10px;
     }
 
@@ -135,16 +200,37 @@
     }
 }
 
-
-.fot{
+.nome{
     display: flex;
-    width: 999px;
 }
 
-
-#adaidas{
-    margin-top: 500px;
+#teste12{
+    margin-left: -680px;
+    font-size: 40px;
+    margin-top: 590px;
+    
 }
+
+#teste13{
+    margin-left: 70px;
+    font-size: 40px;
+    margin-top: 590px;
+   
+}
+
+#teste14{
+    margin-left: 350px;
+    font-size: 40px;
+    margin-top: 590px;
+    
+}
+
+#teste15{
+    margin-top: 590px;
+    font-size: 40px;
+    margin-left: 180px;
+}
+
 
 .linhass{
     margin-top: 30px;
@@ -152,237 +238,156 @@
     padding-bottom: 1px;
 }
 
+
 .tenis{
     display: flex;
 
     .pisante{
         margin-top: 9px;
-        margin-left: 10px;
+        margin-left: 35px;
     }
 }
 
 #teste9{
     background-color: #E6E6E6;
-    margin-top: 30px;
+    margin-top: 60px;
     padding-bottom: 100px;
 }
 
 #teste10{
     margin-left: 50px;
     background-color: #E6E6E6;
-    margin-top: 30px;
+    margin-top: 60px;
     padding-bottom: 100px;
 }
 
 #teste11{
     margin-left: 50px;
     background-color: #E6E6E6;
-    margin-top: 30px;
+    margin-top: 60px;
     padding-bottom: 100px;
 }
 
-.nome{
+.mome{
     display: flex;
-
-
-}
-
-#teste12{
-    margin-left: -550px;
-    font-size: 40px;
-    margin-top: 30px;
     
 }
 
-#teste13{
-    margin-left: 210px;
+#teste20{
+    margin-top: 565px;
+    margin-left: -630px;
     font-size: 40px;
-    margin-top: 30px;
-   
 }
 
-#teste14{
-    margin-left: 240px;
+#teste21{
+    margin-top: 565px;
+    margin-left: 337px;
     font-size: 40px;
-    margin-top: 30px;
-    
 }
 
-
+#teste22{
+    margin-top: 565px;
+    margin-left: 260px;
+    font-size: 40px;
+}
 
 .linhasss{
-    margin-top: 480px;
+    margin-top: 50px;
     background-color: #000;
     padding-bottom: 1px;
 }
 
 .produtos{
     display: flex;
-    margin-top: 60px;
-    margin-left: 35px;
+    margin-top: 40px;
+    margin-left: 60px;
+    opacity: 0.6;
 }
 
-.produtossss{
-    display: flex;
+.botao-transparente {
+    background-color: transparent;
+    border: 2px solid #5c176d; 
+    color: #122942; 
+ 
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: #771877; 
+        color: white; 
+    }
+}
+
+#produtoss{
     margin-left: 1100px;
-    margin-top: -40px;
-    font-size: 20px; 
-    color: #ffff; 
-    text-decoration: none;
+    margin-top: -900px;
 }
 
 .modelo{
     display: flex;
-    margin-left: 10px;
-}
-
-#teste15{
-    margin-top: 40px;
-    margin-left: 250px;
-    font-size: 30px;
+    margin-left: -50px;
 }
 
 #teste16{
-    margin-top: 140px;
-    margin-left: 190px;
+    margin-top: 150px;
+    margin-left: 150px;
 }
 
 #teste17{
-    margin-top: 140px;
-    margin-left: 220px;
+    margin-top: 150px;
+    margin-left: 200px;
 }
 
 #teste18{
-    margin-top: 140px;
+    margin-top: 150px;
     margin-left: 220px;
 }
 
 #teste19{
-    margin-top: 100px;
+    margin-top: 150px;
     margin-left: 100px;
 }
 
 .name{
     display: flex;
     flex-direction: row;
+    color: gray;
 }
 
 #me{
     display: flex;
-    margin-left: 109px;
+    margin-left: 105px;
     font-size: 25px;
     margin-top: 20px;
 }
 
 #tim{
     display: flex;
-    margin-left: 190px;
+    margin-left: 185px;
     margin-top: 19px;
     font-size: 19px;
 }
 
 #setas{
     display: flex;
-    margin-left: 220px;
-    margin-top: 10px;
+    margin-left: 219px;
+    margin-top: 19px;
     font-size: 19px;
 }
 
 #sa{
-
+    display: flex;
+    margin-left: 302px;
+    font-size: 19px;
+    margin-top: 19px;
+    
 }
 
-.logoo{
-    width: 100px;
-    margin-left: 50px;
-}
-
-.procurar{
-    margin-left: 50px;
-    padding: 6px;
-    background-color: #795D94;
-    border-color: #160527;
-}
-
-.procurar2{
-    position: absolute;
-    margin-right: 25px;
-}
-
-@media (max-width: 1200px) {
-    .logoo {
-        width: 120px;
-        margin-left: 20px;
-    }
-    .linqui {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-    }
-    .nitro .gabriella {
-        font-size: 20px;
-    }
-    .parceria .parcerias {
-        margin-left: 0;
-    }
-    .marcas {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .inicial {
-        flex-direction: column;
-        align-items: center;
-        font-size: 15px;
-    }
-    .link {
-        font-size: 15px;
-        margin: 5px;
-    }
-    .logoo {
-        width: 100px;
-    }
-    .marcas {
-        gap: 15px;
-    }
-    .produtos h1 {
-        font-size: 24px;
-    }
-    .parceria .parcerias,
-    .nitro .gabriella {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    .inicial {
-        padding: 15px 0;
-        font-size: 14px;
-    }
-    .link {
-        font-size: 14px;
-        margin: 5px;
-    }
-    .logoo {
-        width: 80px;
-        margin-left: 0;
-    }
-    .parcerias,
-    .gabriella,
-    .produtos h1 {
-        font-size: 18px;
-        text-align: center;
-    }
-    .modelo,
-    .name,
-    .marcas {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .tenis .pisante {
-        width: 100%;
-        margin: 5px 0;
-    }
+.linhassss{
+    margin-top: 30px;
+    background-color: #000;
+    padding-bottom: 1px;
 }
