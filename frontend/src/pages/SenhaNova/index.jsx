@@ -75,7 +75,24 @@ export default function Senha() {
 
                     <img className='usuario' src='/assets/images/user.png' alt='a' />
 
-                    <input type="text" />
+
+                    <div className='input-field'>
+                        <h3>Insira seu email Cadastrado:</h3>
+                        <input id='login' type='login' value={email} placeholder=''
+                            onChange={(e) => setEmail(e.target.value)} />
+                    </div>
+                    <div className='input-field'>
+                        <h3>Insira uma nova senha:</h3>
+                        <input type='password' id='senha' value={senha} placeholder=''
+                            onChange={(e) => setSenha(e.target.value)} />
+                    </div>
+                    <div className='input-field'>
+                        <h3>Insira novamente a senha:</h3>
+                        <input type='password' id='senha' value={newsenha} placeholder=''
+                            onChange={(e) => setNewsenha(e.target.value)} />
+                    </div>
+
+                    <button onClick={() => navigate('/login')}>Redefinir</button>
                 </form>
             </div>
         </>

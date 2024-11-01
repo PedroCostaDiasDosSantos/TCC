@@ -20,19 +20,109 @@
     justify-content: center;
   
     .senha-form {
-      margin-top: 120px;
+      margin-top: 50px;
       margin-right: 780px;
     }
   
     .h1-senha {
-      font-size: 4vh;
-      margin-right: 13%;
+      font-size: 50px;
+      margin-bottom: 50px;
     }
   
     .usuario {
       width: 150px;
   
-      margin-right: 85px;
-      margin-top: 50px;
+      margin-left: 165px;
     }
   }
+
+  
+.container-senha .input-field {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  margin: 65px auto;
+}
+
+.input-field input {
+  width: 100%;
+  height: 100%;
+  color: #2D1E3D;
+  background-color: #F5F5F5;
+  
+
+  outline: none;
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.input-field input::placeholder {
+  color: white;
+}
+
+
+.container-senha button {
+  width: 80px;
+  height: 30px;
+
+  background-color: #2D1E3D;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+}
+
+
+
+  /* @media */
+
+  
+@media (max-width: 768px) {
+  .container-senha {
+    padding: 10px;
+
+    .senha-form {
+      .h1-senha {
+        font-size: 22px;
+      }
+
+      .usuario {
+        width: 70px;
+      }
+
+      button {
+        height: 35px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .roxoo {
+    .roxom {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container-senha {
+    .senha-form {
+      .h1-senha {
+        font-size: 18px;
+      }
+
+      .input-field h3 {
+        font-size: 14px;
+      }
+
+      .input-field input {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+}

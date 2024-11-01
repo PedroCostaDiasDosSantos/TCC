@@ -8,8 +8,10 @@ export async function inserirLogin(pessoa) {
 					        values (?, ?)
     `;
 
-    let hash = crypto.SHA256(pessoa.senha).toString();
-    
+    let hash = crypto.createHash('sha256').update(pessoa.senha).digest('hex');
+
+    console.log("Inserindo usuário:", pessoa.login, hash); 
+
     let resposta = await con.query(comando, [pessoa.login, pessoa.senha, hash])
     let info = resposta[0];
     
@@ -27,56 +29,23 @@ export async function validarUsuario(pessoa) {
             and ds_senha = ?    
     `;
 
-    let hash = crypto.SHA256(pessoa.senha).toString();
-    
-    let resposta = await con.query(comando, [pessoa.login, pessoa.senha, hash])
-    let info = resposta[0];
-    
-    return info.insertId; 
+    try {
+        let registros = await con.query(comando, [pessoa.login]);
+
+        if (registros[0].length === 0) {
+            throw new Error("Usuário não encontrado");
+        }
+
+        let usuario = registros[0][0];
+        let hash = crypto.createHash('sha256').update(pessoa.senha).digest('hex');
+
+        if (usuario.ds_senha !== hash) {
+            throw new Error("Usuário ou senha incorreto(s)");
+        }
+
+        return usuario; 
+    } catch (error) {
+        console.error("Erro ao validar usuário:", error);
+        throw new Error("Não foi possível validar o usuário.");
+    }
 }
-
-export async function consultarLogin(){
-    const comando = `
-        select
-            nm_login		login,
-            ds_senha		senha
-        from tb_adm
-    `;
-
-    let resposta = await con.query(comando);
-    let registros = resposta[0];
-
-    return registros;
-}
-
-export async function alterarLogin(id, pessoa){
-    const comando = `
-        update tb_adm
-            set nm_login = ?,
-                ds_senha = ?
-            where id_login = ?;  
-    `;
-
-    let hash = crypto.SHA256(pessoa.senha).toString();
-    
-    let resposta = await con.query(comando, [pessoa.login, pessoa.senha, hash, id])
-    let info = resposta[0];
-    
-    return info.affectedRows;
-}
-
-export async function removerLogin(id){
-    const comando = `
-        delete from tb_adm
-            where id_login = ?
-    `;
-
-    let resposta = await con.query(comando, [id]);
-    let info = resposta[0];
-
-    return info.affectedRows;
-}
-
-
-
-
