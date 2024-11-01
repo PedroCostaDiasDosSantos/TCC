@@ -106,8 +106,10 @@ export default function inicial(){
     </div>
 
     const Div18 = () => <div className='poster'>
-        <img id='teste20' src="/assets/images/Air_Jordan_poster.png" alt="a" />
-        
+        <img id='jota20' src="/assets/images/jordan.jpg" alt="a" />
+       
+        <img id='jota22' src="/assets/images/cinza.png" alt="a" />
+        <img id='jota23' src="/assets/images/verde.png" alt="a" />
     </div>
 
     const Div19 = () => <div className='brasil'>
