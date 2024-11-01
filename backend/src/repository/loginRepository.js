@@ -23,10 +23,7 @@ export async function validarUsuario(pessoa) {
         select
             id_login id,
             nm_login nome
-        from tb_adm
-        where
-            nm_login = ?
-            and ds_senha = ?    
+        from tb_adm    
     `;
 
     try {
