@@ -21,11 +21,16 @@ export default function Login() {
       "senha": senha
     }
 
+          //  >>>> Servidor Local <<<<
     const url = `http://localhost:5032/entrar/`
+
+          //  >>>> Servidor do Bruno <<<<
+    // const url = `http://4.172.207.208:3064/entrar/`
     let resp = await axios.post(url, usuario)
 
     if (resp.data.erro != undefined) {
       toast.error(resp.data.erro)
+      
     } else {
       localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario))
       localStorage.setItem('TOKEN', resp.data.token)

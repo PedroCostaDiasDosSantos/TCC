@@ -2,6 +2,7 @@ import './index.scss'
 import Botao from '../Botao'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import Menu from '../Menu'
 
 export default function Cabecalho() {
 
@@ -19,13 +20,17 @@ export default function Cabecalho() {
     }, [])
 
     return (
-        <div className='cabecalho-container'>
+        <>
+        <Menu/>
+            <div className='cabecalho-container'>
 
-            <img className='logo' src="/assets/images/logo.png" alt="" />
-            
-            <h2>{usuario?.nome}!</h2>
+                <img className='logo' src="/assets/images/logo.png" alt="" />
 
-            <Botao titulo='Sair' onClick={sair} outline />
-        </div>
+                <h2>{usuario?.nome}!</h2>
+
+                <Botao titulo='Sair' onClick={sair} outline />
+            </div>
+        </>
+
     );
 }

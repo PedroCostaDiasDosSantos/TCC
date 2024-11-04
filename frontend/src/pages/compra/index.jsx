@@ -123,7 +123,6 @@ const Div21 = () => <div className='caminhao'>
 
 return(
     <>
-    <Menu/>
     <Div1 />
     <Div2 />
     <Div3 />   

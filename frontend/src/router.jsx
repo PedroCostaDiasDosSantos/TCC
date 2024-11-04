@@ -7,6 +7,7 @@ import Inicial from './pages/principal/';
 import Error from './pages/error/';
 
 import Compra from './pages/compra'
+import Cadastrar from './pages/cadastrar';
 
 
 
@@ -22,6 +23,7 @@ export default function Rotas() {
                 <Route path='/' element={<Inicial />} />
                 <Route path='/comprar' element={<Compra />} />
                 <Route path='/error' element={<Error />} />
+                <Route path='/cadastro' element={<Cadastrar />} />
             </Routes>
         </BrowserRouter>
 

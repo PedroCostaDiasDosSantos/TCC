@@ -13,7 +13,7 @@ export default function Menu() {
 
     return (
 
-        <><div className="container">
+        <><div className="container-menu">
             <button onClick={toggleMenu} className="menu-button">
                 {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
