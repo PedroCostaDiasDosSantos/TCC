@@ -7,8 +7,6 @@
     padding: 30px 0px 60px 0px;
     text-decoration: none;
     
-   
-
     .link{
         color: #fff;
         padding: 0px 0px 0px 0px;
@@ -43,7 +41,6 @@
         .link:active {
           transform: scale(0.95); 
         }
-       
     }
 
 #sla1{
@@ -62,7 +59,6 @@
 .search-container {
     display: flex;
     align-items: center;
-   
 }
 .search-input {
     padding: 10px;
@@ -89,8 +85,7 @@
 .usuario{
     display: flex;
     
-    margin-top: -90px;
-    
+    margin-top: -50px;
 
     color: #573b3b;
     
@@ -98,15 +93,13 @@
 
 .dell{
     display: flex;
-    margin-left: 1150px;
+    margin-left: 1190px;
 }
-
-
 
 .fotos{
     display: flex;
     .logo{
-        width: 1263px;
+        width: 1257px;
     }
 }
 
@@ -120,7 +113,6 @@
     display: flex;
     flex-direction: column;
    
-
     .gabriella{
         margin-top: 16px;
         margin-left: 650px;
@@ -150,8 +142,6 @@
     font-size: 13px;
     text-decoration: none
     
-
-    
 }
 
 .linhaD{
@@ -167,28 +157,36 @@
         display: flex;
 
         margin-top: 50px;
-        margin-left: 536px;
+        margin-left: 539px;
     }
 }
 
 .marcas{
     display: flex;
 
+   .adidas{
+        display: flex;
+        margin-top: 60px;
+        margin-bottom: 70px;
+        margin-left: 80px;
+        border-radius: 10px 10px 10px 10px;
+   }
+
     .puma{
         display: flex;
         margin-top: 60px;
         margin-bottom: 80px;
-        margin-left: 60px;
+        margin-left: 150px;
         border-radius: 10px 10px 10px 10px;
         width: 150px;
         height: auto;
-    }
-
+    }  
+    
     .nike{
         display: flex;
         margin-top: 60px;
         margin-bottom: 70px;
-        margin-left: 290px;
+        margin-left: 180px;
         border-radius: 10px 10px 10px 10px;
     }
 
@@ -205,24 +203,21 @@
 }
 
 #teste12{
-    margin-left: -680px;
+    margin-left: -660px;
     font-size: 40px;
-    margin-top: 590px;
-    
+    margin-top: 590px;  
 }
 
 #teste13{
-    margin-left: 70px;
+    margin-left: 160px;
     font-size: 40px;
-    margin-top: 590px;
-   
+    margin-top: 590px; 
 }
 
 #teste14{
-    margin-left: 350px;
+    margin-left: 230px;
     font-size: 40px;
     margin-top: 590px;
-    
 }
 
 #teste15{
@@ -394,30 +389,173 @@
 
 .poster{
     display: flex;
-    margin-top: 80px;
-    margin-bottom: 200px;
+    margin-top: 50px;
+    position: absolute;
+   
     margin-left: 50px;
     height: auto;
 }
 
 #jota20{
-    width: 480px;
+    width: 400px;
+    
+    position: absolute;
 }
 
 #teste21{
     width: 12px;
-
-   
 }
 
 #jota22{
-    width: 300px;
-    padding-top: 500px;
-  
+    width: 230px;
+    margin-left: 420px;
+    margin-top: 340px;
+    position: absolute;
 }
 
 #jota23{
-    width: 300px;
-    padding-top: 500px;
+    width: 470px;
+    padding-top: 580px;
+    margin-top: -240px;
+    margin-left: 680px;
    
+}
+
+#jota24{
+    width: 735px;
+   
+    margin-left: 420px;
+    position: absolute;
+    height: auto;
+}
+
+.linhasssss{
+    margin-top: 820px;
+    background-color: #000;
+    padding-bottom: 1px;
+}
+
+.linquess{
+    display: flex;
+    background-color: #2D1E3D;
+    margin-top: 150px;
+    height: 150px;
+
+    .ai{
+        width: 190px;
+        margin-top: 200px;
+       
+    }
+
+    .linkk{
+        padding-top: 100px;
+    } 
+}
+
+#link1{
+    margin-left: 200px;
+    margin-top: -70px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#link2{
+    margin-top: -70px;
+    margin-left: 360px;
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+}
+
+#link3{
+    margin-top: -70px;
+    margin-left: 500px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#link4{
+    margin-top: -70px;
+    margin-left: 206px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sobre{
+    display: flex;
+    margin-left: -95px;
+}
+
+#paysandu{
+    margin-left: 296px;
+    margin-top: -70px;
+    text-decoration: none;
+    color: #fff;
+}
+#ibis{
+    margin-left: -45px;
+    margin-top: -32px;
+    text-decoration: none;
+    color: #fff;
+}
+#nautico{
+    margin-left: 95px;
+    margin-top: -70px;
+    text-decoration: none;
+    color: #fff;
+}
+#crb{
+    margin-left: -180px;
+    margin-top: -32px;
+    text-decoration: none;
+    color: #fff;
+}
+#remo{
+    margin-left: 325px;
+    margin-top: -70px;
+    text-decoration: none;
+    color: #fff;
+}
+#pelotas{
+    margin-left: -69px;
+    margin-top: -32px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.fat{
+    background-color: #2D1E3D;
+ 
+    padding-left: 1130px;
+}
+
+#podrao{
+    margin-right: 10px;
+}
+
+#podroes{
+    margin-right: 10px;
+}
+
+.logo-final{
+    display: flex;
+    margin-top: -970px;
+}
+
+#vara{
+   
+    margin-left: -1200px;
+    margin-bottom: 0px;
+    width: 130px;
+}
+
+.brasil{
+    display: flex;
+    margin-top: -3200px;
+    margin-left: 120px;
+    
+}
+
+#bola1{
+    width: 90px;
 }

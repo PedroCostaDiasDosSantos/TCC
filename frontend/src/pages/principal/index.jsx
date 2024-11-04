@@ -10,9 +10,9 @@ export default function inicial(){
         
 
         <h1 className='linqui'>
-            <a className='link' id='sla1' href='#'>Lançamentos</a>
-            <a className='link' id='sla2' href='#'>Masculino</a>
-            <a className='link' id='sla3' href='#'>Feminino</a>
+            <a className='link' id='sla1' href='/lancamento'>Lançamentos</a>
+            <a className='link' id='sla2' href='/masculino'>Masculino</a>
+            <a className='link' id='sla3' href='/feminino'>Feminino</a>
 
             <input id='busca' type="text" class="search-input" placeholder="Pesquisar..." />
             <button class="search-button">Buscar</button>
@@ -43,10 +43,10 @@ export default function inicial(){
     </div>
 
     const Div7 = () => <div className='marcas'>
-            <img className='puma' id="teste5" src='/assets/images/adidas.png' alt='a' />
-            <img className='puma' id="teste5" src='/assets/images/puma.png.png' alt='a' /> 
+            <img className='adidas' id="teste5" src='/assets/images/adidas.png' alt='a' />
+            <img className='puma' id="teste999" src='/assets/images/puma.png.png' alt='a' /> 
             <img className='nike' id="teste6" src='/assets/images/nike.png' alt='a' />
-            <img className='new' id="teste6" src='/assets/images/new.png' alt='a' />
+            <img className='new' id="teste9999" src='/assets/images/new.png' alt='a' />
     </div>
 
 
@@ -107,17 +107,49 @@ export default function inicial(){
 
     const Div18 = () => <div className='poster'>
         <img id='jota20' src="/assets/images/jordan.jpg" alt="a" />
-       
-        <img id='jota22' src="/assets/images/cinza.png" alt="a" />
-        <img id='jota23' src="/assets/images/verde.png" alt="a" />
+        <img id='jota24' src="/assets/images/listrado.png" alt="a"/>  
+        <img id='jota22' src="/assets/images/cinza.png" alt="a" />      
+        <img id='jota23' src="/assets/images/verde.png" alt="a" /> 
+        
     </div>
 
-    const Div19 = () => <div className='brasil'>
-        <img id='bola1' src="/assets/images/logo.png" alt="" />
+    const Div19 = () => <div className='linhasssss'>
     </div>
 
-    const Div20 = () => <div className='usuario'>
-         <a href='#'><img className="dell" src="/assets/images/User.png" alt="" /></a>
+    const Div20 = () => <div className='linquess'>
+    <a className='linkk' id='link1' href='#'>Inicio</a>
+    <a className='linkk' id='link2' href='#'>Sobre Nós</a>
+
+    <a className='linkk' id='link3' href='#'>Suporte</a>
+    <a className='linkk' id='link4' href='#'>Informações</a>
+    </div>
+
+    const Div21 = () => <div className='sobre'>
+    <a href='#' className='linkss' id='paysandu'>Home</a>
+    <a href='#' className='linkss' id='ibis'>Produtos</a>
+    <a href='#' className='linkss' id='nautico'>Informações da Empresa</a>
+    <a href='#' className='linkss' id='crb'>Contato</a>
+    <a href='#' className='linkss' id='remo'>Telefones</a>
+    <a href='#' className='linkss' id='pelotas'>Chat</a>
+    </div>
+
+    const Div22 = () => <div className='fat'>
+          <a href='#'> <img className='caldo' id="podrao" src='/assets/images/Phone.png' alt='a' /></a>
+          <a href='#'> <img className='caldo' id="podroes"src='/assets/images/mail.png' alt='a' /></a>
+          <a href='#'> <img className='caldo' id="3" src='/assets/images/Instagram.png' alt='a' /></a>
+          
+    </div>
+
+    const Div23 = () => <div className='logo-final'>
+        <img id='vara'src='/assets/images/logo.png' alt='a' />
+    </div>
+
+    const Div24 = () => <div className='brasil'>
+         <img id='bola1' src="/assets/images/nic.png" alt="" /> 
+    </div>
+
+    const Div25 = () => <div className='usuario'>
+         <a href='/login'><img className="dell" src="/assets/images/User.png" alt="" /></a>
     </div>
     return(
         <>
@@ -140,6 +172,13 @@ export default function inicial(){
         <Div16/>
         <Div17/>
         <Div18/>
+        <Div19/>
+        <Div20/>
+        <Div21/>
+        <Div22/>
+        <Div23/>
+        <Div24/>
+       
         </>
     )
 }
