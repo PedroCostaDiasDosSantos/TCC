@@ -49,7 +49,7 @@ export default function Consultar() {
 
                 <div className='botoes'>
                     <Botao className='botao' titulo='Buscar' onClick={buscar}/>
-                    <Botao className='botao' titulo='Cadastrar' onClick={() => navigate('/cadastrar')}/>
+                    <Botao className='botao' titulo='Cadastrar' onClick={() => navigate('/cadastro')}/>
                 </div>
 
                 <table>

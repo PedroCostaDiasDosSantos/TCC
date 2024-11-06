@@ -2,9 +2,10 @@ import './index.scss'
 import Botao from '../Botao'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import Menu from '../Menu'
 
 
-export default function Cabecalho() {
+export default function Faixa() {
 
     const [usuario, setUsuario] = useState(null)
     const navigate = useNavigate();
@@ -20,14 +21,23 @@ export default function Cabecalho() {
     }, [])
 
     return (
-        <div className='cabecalho-container'>
+        <>
+            <Menu />
+            <div className='faixa-container'>
 
-            <img className='logo' src="/assets/images/logo.png" alt="" />
-            
-            <h2>
-                
-            </h2>
+                <img className='logo-faixa' src="/assets/images/logo.png" alt="" />
 
-        </div>
+                <div className='linkis'>
+                    <a className='linki' id='a' href='/lancamento'>Lançamentos</a>
+                    <a className='linki' id='b' href='/masculino'>Masculino</a>
+                    <a className='linki' id='c' href='/feminino'>Feminino</a>
+
+                    <input id='busca' type="text" class="search" placeholder="Pesquisar..." />
+                    <button class="search-botao">Buscar</button>
+                </div>
+
+            </div>
+        </>
+
     );
 }

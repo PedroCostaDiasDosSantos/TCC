@@ -12,8 +12,10 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: transparent;
+    color: white;
     transition: transform 0.3s ease;
+    margin-left: 15px;
+    margin-top: 30px;
   }
   
   .menu-button:hover {
@@ -26,11 +28,12 @@
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #f4f4f4;
+    background-color: #ad81c7;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     padding: 20px;
     transition: left 0.3s ease;
     z-index: 1;
+    
   }
   
   .sidebar.open {
@@ -40,11 +43,15 @@
   .sidebar h2 {
     margin-top: 0;
     margin-left: 150px;
+    
+    margin-top: 25px;
   }
   
   .sidebar ul {
     list-style: none;
     padding: 0;
+    
+    margin-top: 50px;
   }
   
   .sidebar ul li {
@@ -70,6 +77,18 @@
   .buttons button {
     padding: 10px 20px;
     cursor: pointer;
+  }
+
+  .finalizar{
+    margin-top: 550px;
+    position: absolute;
+  }
+
+  .saida{
+    height: 35px;
+    margin-left: 180px;
+    margin-top: 560px;
+
   }
   
   /* Responsividade */

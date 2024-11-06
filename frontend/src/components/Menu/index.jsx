@@ -24,7 +24,10 @@ export default function Menu() {
                     <li><Link to='/login'>Login</Link></li>
                     <li><Link to='/'>Inicio</Link></li>
                     <li><a href="#Ajuda">Precisa de Ajuda?</a></li>
-                    <li><a href="#finalizar">Finalizar sessão</a></li>
+                    <div className='finalizar'>
+                    <li><Link to='/login' >Finalizar sessão</Link></li>
+                    </div>
+                    <li><img className='saida' src="./assets/images/sair-icon.png " alt="" /></li>
                 </ul>
             </div>
 
