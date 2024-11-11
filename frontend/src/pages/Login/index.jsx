@@ -30,8 +30,10 @@ export default function Login() {
 
     if (resp.data.erro != undefined) {
       toast.error(resp.data.erro)
+      alert('Usuario Incorreto')
       
     } else {
+      
       localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario))
       localStorage.setItem('TOKEN', resp.data.token)
       navigate('/consultar')

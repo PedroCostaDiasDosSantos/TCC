@@ -13,16 +13,6 @@ insert into tb_adm(nm_login, ds_senha)
 values
 ('Pedro', 1234);
 
-create table tb_adm_esqueci_senha(
-id_esqueci_senha int primary key auto_increment,
-id_login int,
-ds_email varchar(200),
-nmr_codigo int,
-ds_senha_novamente varchar(200),
-ds_senha varchar(200),
-FOREIGN KEY (id_login) references tb_adm(id_login)
-);
-
 create table tb_produto(
 id_produto int primary key auto_increment,
 id_fornecedor int,

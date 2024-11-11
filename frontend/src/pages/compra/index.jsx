@@ -5,21 +5,17 @@ import Menu from '../../components/Menu'
 
 export default function produtos(){
     const Div1 =() => <div className='barraa'>
-        <a className='barra' id="a" href='#'>Lançamentos</a>
-        <a className='barra' id="b"href='#'>Masculino</a>
-        <a className='barra' id="c" href='#'>Feminino</a>
-        <a className='barra' id="d" href='#'>Outlet</a>
+        <a className='linkk' id="aaa" href='#'>Lançamentos</a>
+        <a className='linkk' id="bb"href='#'>Masculino</a>
+        <a className='linkk' id="cc" href='#'>Feminino</a>
+        
+
+        <input id='busca' type="text" class="search-input1" placeholder="Pesquisar..." />
+            <button id='busca1' class="search-button1">Buscar</button>
     </div>
 
     const Div2 = () => <div className='etiopia'>
         <img className='azeitona' src='/assets/images/logo.png' alt='a' />
-    </div>
-
-    const Div3 = () =>  <div><input className='procurar' type="search" />
-    <img className='procurar2' src="/assets/images/procurar.png" alt="a " /></div>  
-
-    const Div4 = () => <div className='chuva'>
-        <a href='/login'><img className='azeite' src='/assets/images/usuario.png' alt='a' /></a>
     </div>
 
     const Div5 = () => <div className='seta'>
@@ -83,7 +79,7 @@ export default function produtos(){
 
  const Div15 = () => <div className='aiaiD'>
   
-    <a className='linkk' id='link1' href='#'>Inicio</a>
+    <a className='linkk' id='link1' href='/inicial'>Inicio</a>
     <a className='linkk' id='link2' href='#'>Sobre Nós</a>
 
     <a className='linkk' id='link3' href='#'>Suporte</a>
@@ -125,25 +121,23 @@ return(
     <>
     <Div1 />
     <Div2 />
-    <Div3 />   
-    <Div4 /> 
-    <Div5 />
-    <Div6 />
-    <Div7 />
-    <Div8 />
-    <Div9 />
-    <Div10/>
-    <Div11/>
-    <Div12/>
-    <Div13/>
-    <Div14/>
-    <Div15/>
-    <Div16/>
-    <Div17/>
-    <Div18/>
-    <Div19/>
-    <Div20/>    
-    <Div21/>
+    <Div5 /> 
+    <Div6 /> 
+    <Div7 /> 
+    <Div8 /> 
+    <Div9 /> 
+    <Div10/> 
+    <Div11/> 
+    <Div12/> 
+    <Div13/> 
+    <Div14/> 
+    <Div15/> 
+    <Div16/> 
+    {/* <Div17/> */}
+    {/* <Div18/> */}
+    {/* <Div19/> */}
+    {/* <Div20/> */}
+    {/* <Div21/> */} 
     </>
 
 )

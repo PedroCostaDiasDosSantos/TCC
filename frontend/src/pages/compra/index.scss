@@ -2,40 +2,105 @@
     display: flex;
 
     background-color: #2D1E3D;
+    display: flex;
+    text-decoration: none;
+    margin-top: 0px;
+    padding-bottom: 50px;
+    color: #fff;
 
-    .barra{
-        display: flex;
-        text-decoration: none;
-        margin-top: 80px;
-        padding-bottom: 40px;
+    .linkk{
         color: #fff;
-    }
+        padding: 0px 0px 0px 0px;
+    
+        font-size: 17px;
+        padding:5px;
+        margin: 0px -20px 0px 190px;
+        text-decoration: none;
+
+        transition: color 0.3s ease, transform 0.3s ease;
+
+        
+        &:hover {
+          color: #9b25b3;
+          transform: scale(1.3); 
+        }
+
+        @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+        
+          
+          animation: fadeIn 0.5s ease;
+        }
+        
+        
+        .link:active {
+          transform: scale(0.95); 
+        }
+    
 }
 
-#a{
-    margin-top: 50px;
-    margin-left: 300px;
+#aaa{
+    margin-top: 48px;
+    margin-left: 190px;
 }
 
-#b{
-    margin-top: 50px;
+#bb{
+    margin-top: 48px;
+    margin-left: 100px;
+}
+
+#cc{
+    margin-top: 48px;
+    margin-left: 100px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.search-input1 {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     margin-left: 90px;
 }
-
-#c{
-    margin-top: 50px;
-    margin-left: 90px;
+.search-button1 {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3s ease;
+    background-color: #0b4079;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.search-button1:hover {
+    background-color: #2c52bd;
 }
 
-#d{
-    margin-top: 50px;
-    margin-left: 90px;
+#busca{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 700px;
 }
 
+#busca1{
+    position: absolute;
+    margin-top: 38px;
+    margin-left: 920px;
+}
 .etiopia{
     display: flex;
-    margin-top: -140px;
-    margin-left: 99px;
+    margin-top: -155px;
+    margin-left: 1070px;
 
 
     .azeitona{
@@ -43,23 +108,7 @@
     }
 }
 
-.procurar{
-    display: flex;
-    margin-top: -90px;
-    margin-left: 920px;
-}
 
-.procurar2{
-    display: flex;
-    margin-top: -26px;
-    margin-left: 953px;
-}
-
-.chuva{
-    display: flex;
-    margin-top: -30px;
-    margin-left: 1160px;
-}
 
 .seta{
     display: flex;
@@ -89,6 +138,10 @@
 .compartilhar{
     display: flex;
     margin-top: 190px;
+    
+}
+
+#vascp{
     margin-left: 450px;
 }
 
@@ -112,8 +165,8 @@
 
 .nome{
     display: flex;
-    margin-left: 750px;
-    margin-top: -626px;
+    margin-left: 780px;
+    margin-top: -635px;
     font-size: 20px;
 }
 
@@ -339,13 +392,13 @@
 }
 
 .seguro{
-    margin-left: 298px;
+    margin-left: 278px;
     margin-top: -69px;
 }
 
 #seguro{
     margin-top: 20px;
-    margin-left: 293px;
+    margin-left: 273px;
     font-size: 12px;
     color: #15FE00;
     opacity: 0.5;

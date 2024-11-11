@@ -8,61 +8,41 @@ import toast, { Toaster } from 'react-hot-toast';
 
 export default function Senha() {
 
-    const [email, setEmail] = useState("");
+
+    const [login, setLogin] = useState("");
     const [senha, setSenha] = useState("");
-    const [newsenha, setNewsenha] = useState("");
-    const [confirmNewSenha, setConfirmNewSenha] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
-    const [successMessage, setSuccessMessage] = useState("");
+    const [Novasenha, setNovasenha] = useState("");
+
+
+    async function alterar(e) {
+        e.preventDefault();
+    
+        const usuario = {
+          "Novasenha": Novasenha,
+          "login": login,
+          "senha": senha
+        }
+    
+              //  >>>> Servidor Local <<<<
+        const url = `http://localhost:5032/alterar/`
+    
+              //  >>>> Servidor do Bruno <<<<
+        // const url = `http://4.172.207.208:3064/alterar/`
+        let resp = await axios.post(url, usuario)
+    
+        if (resp.data.erro != undefined) {
+          toast.error(resp.data.erro)
+          alert('Usuario Incorreto')
+          
+        } else {
+          
+          localStorage.setItem('USUARIO', JSON.stringify(resp.data.usuario))
+          localStorage.setItem('TOKEN', resp.data.token)
+          navigate('/login')
+        }
+      }
 
     const navigate = useNavigate();
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-
-        if (newsenha !== confirmNewSenha) {
-            setErrorMessage("A nova senha e a confirmação não coincidem.");
-            return;
-        }
-
-
-        setErrorMessage("");
-        setSuccessMessage("");
-
-        try {
-
-            const response = await fetch("/senha/", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email,
-                    senha,
-                    newsenha,
-                }),
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                setSuccessMessage("Senha alterada com sucesso!");
-
-
-                setTimeout(() => {
-                    navigate("/");
-                }, 2000);
-            } else {
-                setErrorMessage(data.message || "Ocorreu um erro.");
-            }
-        } catch (error) {
-            setErrorMessage("Erro ao alterar senha.");
-        }
-    };
-
-
-
     return (
         <>
             <div className='container-senha'>
@@ -71,28 +51,28 @@ export default function Senha() {
                 </div>
 
                 <form className='senha-form' >
-                    <h1 className='h1-senha'>Esqueceu a Senha?!</h1>
+                    <h1 className='h1-senha'>Alterar sua Senha</h1>
 
                     <img className='usuario' src='/assets/images/user.png' alt='a' />
 
 
                     <div className='input-field'>
-                        <h3>Insira seu email Cadastrado:</h3>
-                        <input id='login' type='login' value={email} placeholder=''
-                            onChange={(e) => setEmail(e.target.value)} />
+                        <h3>Insira seu Login:</h3>
+                        <input id='login' type='login' value={login} placeholder=''
+                            onChange={(e) => setLogin(e.target.value)} />
                     </div>
                     <div className='input-field'>
-                        <h3>Insira uma nova senha:</h3>
+                        <h3>Insira sua senha atual:</h3>
                         <input type='password' id='senha' value={senha} placeholder=''
                             onChange={(e) => setSenha(e.target.value)} />
                     </div>
                     <div className='input-field'>
-                        <h3>Insira novamente a senha:</h3>
-                        <input type='password' id='senha' value={newsenha} placeholder=''
-                            onChange={(e) => setNewsenha(e.target.value)} />
+                        <h3>Insira sua nova senha:</h3>
+                        <input type='password' id='senha' value={Novasenha} placeholder=''
+                            onChange={(e) => setNovasenha(e.target.value)} />
                     </div>
 
-                    <button onClick={() => navigate('/login')}>Redefinir</button>
+                    <button onClick={alterar}>Redefinir</button>
                 </form>
             </div>
         </>

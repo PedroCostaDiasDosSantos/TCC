@@ -1,23 +1,25 @@
 import './index.scss';
 import Menu from '../../components/Menu/'
+import Faixa from '../../components/Faixa';
 
 
 export default function inicial(){
 
 
-    const Div1 = () => <div className='inicial'>
+    // const Div1 = () => 
+    // <div className='inicial'>
            
         
 
-        <h1 className='linqui'>
-            <a className='link' id='sla1' href='/lancamento'>Lançamentos</a>
-            <a className='link' id='sla2' href='/masculino'>Masculino</a>
-            <a className='link' id='sla3' href='/feminino'>Feminino</a>
+    //     <h1 className='linqui'>
+    //         <a className='link' id='sla1' href='/lancamento'>Lançamentos</a>
+    //         <a className='link' id='sla2' href='/masculino'>Masculino</a>
+    //         <a className='link' id='sla3' href='/feminino'>Feminino</a>
 
-            <input id='busca' type="text" class="search-input" placeholder="Pesquisar..." />
-            <button class="search-button">Buscar</button>
-        </h1> 
-         </div>
+    //         <input id='buscaar' type="text" class="search-inputt" placeholder="Pesquisar..." />
+    //         <button class="search-buttonn">Buscar</button>
+    //     </h1> 
+    //      </div>
 
 
     const Div2 = () => <div className='fotos'>
@@ -144,17 +146,17 @@ export default function inicial(){
         <img id='vara'src='/assets/images/logo.png' alt='a' />
     </div>
 
-    const Div24 = () => <div className='brasil'>
-         <img id='bola1' src="/assets/images/nic.png" alt="" /> 
-    </div>
+    // const Div24 = () => <div className='brasil'>
+    //      <img id='bola1' src="/assets/images/nic.png" alt="" /> 
+    // </div>
 
-    const Div25 = () => <div className='usuario'>
-         <a href='/login'><img className="dell" src="/assets/images/User.png" alt="" /></a>
-    </div>
+    // const Div25 = () => <div className='usuario'>
+    //      <a href='/login'><img className="dell" src="/assets/images/User.png" alt="" /></a>
+    // </div>
     return(
         <>
-        
-        <Div1 />
+        <Faixa/>
+        {/* <Div1 /> */}
         <Div2 />
         <Div3 />
         <Div4 />
@@ -177,7 +179,7 @@ export default function inicial(){
         <Div21/>
         <Div22/>
         <Div23/>
-        <Div24/>
+        {/* <Div24/> */}
        
         </>
     )

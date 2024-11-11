@@ -22,7 +22,7 @@ endpoints.post('/entrar/', async (req, resp) => {
         }
     }
     catch (err) {
-        resp.status(400).send({
+        resp.status(200).send({
             erro: err.message
         })
     }
@@ -41,7 +41,25 @@ endpoints.post('/adm/', async (req, resp) => {
     }
     catch (err) {
         console.error("Erro ao inserir usuário:", err);
-        resp.status(400).send({
+        resp.status(200).send({
+            erro: err.message
+        })
+    }
+})
+
+endpoints.post('/alterar/', async (req, resp) => {
+    try {
+        let pessoa = req.body;
+
+        let id = await db.alterarSenha(pessoa);
+
+        resp.send({
+            novoId: id
+        })
+    }
+    catch (err) {
+        console.error("Erro ao inserir usuário:", err);
+        resp.status(200).send({
             erro: err.message
         })
     }
