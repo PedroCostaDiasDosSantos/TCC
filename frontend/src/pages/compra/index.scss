@@ -11,7 +11,7 @@
     .linkk{
         color: #fff;
         padding: 0px 0px 0px 0px;
-    
+   
         font-size: 17px;
         padding:5px;
         margin: 0px -20px 0px 190px;
@@ -19,7 +19,7 @@
 
         transition: color 0.3s ease, transform 0.3s ease;
 
-        
+       
         &:hover {
           color: #9b25b3;
           transform: scale(1.3); 
@@ -33,16 +33,16 @@
               opacity: 1;
             }
           }
-        
-          
+       
+         
           animation: fadeIn 0.5s ease;
         }
-        
-        
+       
+       
         .link:active {
           transform: scale(0.95); 
         }
-    
+   
 }
 
 #aaa{
@@ -50,12 +50,12 @@
     margin-left: 190px;
 }
 
-#bb{
+#b{
     margin-top: 48px;
     margin-left: 100px;
 }
 
-#cc{
+#c{
     margin-top: 48px;
     margin-left: 100px;
 }
@@ -99,8 +99,9 @@
 }
 .etiopia{
     display: flex;
-    margin-top: -155px;
-    margin-left: 1070px;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 1050px;
 
 
     .azeitona{
@@ -115,7 +116,7 @@
     margin-top: -10px; 
     .um{
         width: 300px;
- 
+
     }
 }
 
@@ -138,7 +139,7 @@
 .compartilhar{
     display: flex;
     margin-top: 190px;
-    
+   
 }
 
 #vascp{
@@ -154,57 +155,73 @@
 }
 
 #g{
-    margin-top: 30px;
-    margin-left: 78px;
+    position: absolute;
+    margin-top: 450px;
+    margin-left: -642px;
 }
 
 #h{
-    margin-top: 30px;
-    margin-left: 42px;
+    position: absolute;
+    margin-top: 450px;
+    margin-left: -300px;
 }
 
 .nome{
     display: flex;
     margin-left: 780px;
-    margin-top: -635px;
+    margin-top: -300px;
     font-size: 20px;
+}
+
+.share1{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+#share2{
+    opacity: 9.0;
 }
 
 .avaliacao{
     display: flex;
     justify-content: center;
-    margin-top: 60px;
-    margin-left: 360px;
+   
+    margin-top: 15px;
+    margin-left: 315px;
 }
 
 .classificacao{
+    width: 40px;
     display: flex;
-    margin-left: 105px;
+    margin-left: 100px;
     font-size: 12px;
 }
 
 #n{
     margin-top: -20px;
-    margin-left: 790px;
+    position: absolute;
+    margin-left: 760px;
 
     border: 1px solid;
-    padding: 3px 9px ;
+    padding: 3px 11px ;
     opacity: 0.6;
     transition: background-color 0.3s;
 }
 
 .aval{
     display: flex;
-    margin-top: -20px;
-    margin-left: 20px;
+    position: absolute;
+    margin-top: -22px;
+    margin-left: 810px;
     font-size: 20px;
     opacity: 0.8;
 }
 
 .preco{
     display: flex;
-    margin-top: 30px;
-    margin-left: 749px;
+    margin-top: 20px;
+    margin-left: 730px;
     flex-direction: column; 
 }
 
@@ -222,7 +239,7 @@
 
 .fotinha{
     display: flex;
-    margin-left: 750px;
+    margin-left: 730px;
     margin-top: 20px;
     font-size: 15px;
 }
@@ -238,12 +255,12 @@
 .botao{
     display: flex;
     margin-top: 20px;
-    margin-left: 750px;
+    margin-left: 730px;
 }
 
 .number{
     display: flex;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #r{
@@ -265,7 +282,7 @@
 
 
 #t{
-    
+   
     margin-left:20px;
     font-size: 10px;
     padding: 0px 30px 0px 30px;
@@ -277,12 +294,12 @@
 
 .botoes{
     display: flex;
-    margin-left: 730px;
-    margin-top: 30px;
+    margin-left: 710px;
+    margin-top: 20px;
 }
 
 #u{
-     
+    
     margin-left:20px;
     font-size: 40px;
     padding: 0px 30px 0px 30px;
@@ -343,13 +360,13 @@
 .aiaiD{
     display: flex;
     background-color: #222428;
-    margin-top: 150px;
+    margin-top: 250px;
     height: 150px;
 
     .ai{
         width: 190px;
         margin-top: 200px;
-       
+      
     }
 
     .linkk{
@@ -363,7 +380,7 @@
 }
 
 #link1{
-    margin-left: 156px;
+    margin-left: 145px;
     margin-top: -70px;
     color: #fff;
     text-decoration: none;
@@ -371,7 +388,7 @@
 
 #link2{
     margin-top: -70px;
-    margin-left: 360px;
+    margin-left: 350px;
     position: absolute;
     color: #fff;
     text-decoration: none;
@@ -379,26 +396,26 @@
 
 #link3{
     margin-top: -70px;
-    margin-left: 590px;
+    margin-left: 700px;
     color: #fff;
     text-decoration: none;
 }
 
 #link4{
     margin-top: -70px;
-    margin-left: 206px;
+    margin-left: 150px;
     color: #fff;
     text-decoration: none;
 }
 
 .seguro{
-    margin-left: 278px;
+    margin-left: 323px;
     margin-top: -69px;
 }
 
 #seguro{
     margin-top: 20px;
-    margin-left: 273px;
+    margin-left: 319px;
     font-size: 12px;
     color: #15FE00;
     opacity: 0.5;
@@ -406,7 +423,7 @@
 
 .links{
     display: flex;
-    margin-left: -95px;
+    margin-left: -105px;
 }
 
 #paysandu{
@@ -416,7 +433,7 @@
     color: #fff;
 }
 #ibis{
-    margin-left: -42px;
+    margin-left: -43px;
     margin-top: -20px;
     text-decoration: none;
     color: #fff;
@@ -434,13 +451,13 @@
     color: #fff;
 }
 #remo{
-    margin-left: 370px;
+    margin-left: 480px;
     margin-top: -50px;
     text-decoration: none;
     color: #fff;
 }
 #pelotas{
-    margin-left: -69px;
+    margin-left: -68px;
     margin-top: -20px;
     text-decoration: none;
     color: #fff;
@@ -469,12 +486,12 @@
 .outubro{
     margin-top: -5px;
     margin-left: 56px;
-    opacity: 0.3;
+
 }
 
 .caminhao{
     display: flex;
-    
+   
 }
 
 #vara{
@@ -483,3 +500,128 @@
     margin-bottom: 0px;
     width: 130px;
 }
+
+
+
+//   /* Responsividade para telas pequenas */
+  @media (max-width: 1024px) {
+     .barraa {
+       flex-direction: column;
+       padding-left: 90px; /* Alinha os itens verticalmente */
+       padding: 10px;
+       padding-bottom: 40px;
+    }
+    #aaa{
+       margin-top: 70px;
+       margin-left: 3060px;
+    }
+   #b{
+       margin-top: -70px;
+       margin-left: 3078px;
+   }
+  
+   #c{
+       margin-top: 48px;
+       margin-left: 3079px;
+   }
+  
+ 
+    .links {
+     width: 100%;
+     justify-content: center;
+     margin-bottom: 20px;
+   }
+ 
+   .search-bar {
+       width: 100%;
+       justify-content: center;
+       margin-bottom: 20px;
+     }
+
+     #busca{
+       width: 200px;
+       margin-top: 110px;
+       margin-left: 80px;
+     }
+
+     #busca1{
+       width: 100px;
+       margin-top: 112px;
+       margin-left: 300px;
+     }
+ 
+   .azeitona {
+     width: 120px; /* Ajusta a logo para uma largura menor */
+     margin-left: -880px;
+     margin-top: -20px;
+   }
+ 
+   /* Ajusta o tamanho da barra de pesquisa */
+    .search-input1 {
+       margin-left: -900px;
+      width: 100%;
+      max-width: 250px; /* Garante que a barra de pesquisa não ocupe toda a largura */
+    }
+ 
+//     /* Ajusta os links em telas menores */
+    .linkk {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .nome {
+     /* Ajusta o tamanho da fonte */
+   margin-top: 20px; /* Ajusta a posição para melhor exibição em telas menores */
+   margin-left: 90px; 
+  }
+
+  #amonguisss{
+    font-size: 30px;
+    text-align: start;
+  }
+
+ .share1{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 120px; 
+ }
+
+//  .estrela{
+//     display: flex;
+//     margin-left: 0px;
+//  }
+
+.classificacao{
+    display: flex;
+    
+   margin-top: 30px;
+    margin-left: -465px;
+}
+
+.aval{
+    display: flex;
+    font-size: 19px;
+    opacity: 0.7;
+}
+}
+ 
+  /* Responsividade para telas muito pequenas (como smartphones em modo retrato) */
+  @media (max-width: 480px) {
+    .search-input1 {
+      width: 80%; /* Ajusta a largura da barra de pesquisa para telas muito pequenas */
+    }
+ 
+    .search-button1 {
+      width: 50%; /* Ajusta o botão de busca */
+    }
+ 
+    .azeitona {
+      width: 100px; /* Reduz ainda mais o tamanho da logo */
+    }
+  }
+   //  .nome {
+   //     font-size: 16px; /* Diminui o tamanho da fonte do título */
+   //   }
+
+ 
+ 

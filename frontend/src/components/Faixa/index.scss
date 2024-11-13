@@ -92,7 +92,10 @@
     margin-left: 50px;
 }
 
-/* Estilos gerais */
+/* Responsividade faixa */
+ 
+
+/*   Menu     */ 
 .container-menu {
   display: flex;
 
@@ -114,6 +117,7 @@
 
 .menu-button:hover {
   transform: scale(1.1);
+  
 }
 
 .sidebar {
@@ -132,6 +136,7 @@
 
 .sidebar.open {
   left: 0;
+ 
 }
 
 .sidebar h2 {
@@ -166,11 +171,13 @@
 .buttons {
   display: flex;
   gap: 10px;
+  
 }
 
 .buttons button {
   padding: 10px 20px;
   cursor: pointer;
+  
 }
 
 .finalizar{
@@ -185,7 +192,7 @@
 
 }
 
-/* Responsividade */
+/* Responsividade do menu */
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
