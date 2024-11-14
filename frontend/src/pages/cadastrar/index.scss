@@ -1,0 +1,51 @@
+
+.pagina-cadastrar {
+    padding: 69px;
+    background-color: #2D1E3D;
+
+    .form-cadastrar {
+        margin-top: 12px;
+        gap: 10px;
+        padding: 20px;
+        padding-bottom: 158px;
+        width: 100%;
+
+        margin-left: 50%;
+        transform: translateX(-50%);
+        
+        display: flex;
+        flex-direction: column;
+        
+        background-color: white;
+        
+
+        > div {
+            display: flex;
+            align-items: center;
+
+            label {
+                display: inline-block;
+                width: 200px;
+                text-align: right;
+                padding-right: 10px;
+                font: 400 24px Arial;
+            }
+
+            input {
+                font: 400 24px Arial;
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #000;
+            }
+        }
+
+        .acoes-cadastrar {
+            display: flex;
+            width: 100%;
+            justify-content: end;
+
+            gap: 10px;
+            margin-top: 22px;
+        }
+    }
+}

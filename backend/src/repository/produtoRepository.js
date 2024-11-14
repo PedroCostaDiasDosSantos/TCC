@@ -15,16 +15,34 @@ export async function inserirProduto(produto) {
 
 export async function consultarProduto(){
     const comando = `
-        select
-            nm_produto		produto,
-            ds_produto		descricao,
-            qtd_produto     quantidade,
-            vl_valor        valor
+        select id_produto       id,
+               nm_produto		produto,
+               ds_produto		descricao,
+               qtd_produto     quantidade,
+               vl_valor        valor
         from tb_produto
     `;
 
 
     let resposta = await con.query(comando);
+    let registros = resposta[0];
+
+    return registros;
+}
+
+export async function consultarProdutoPorId(id){
+    const comando = `
+        select id_produto       id,
+               nm_produto		produto,
+               ds_produto		descricao,
+               qtd_produto     quantidade,
+               vl_valor        valor
+        from tb_produto
+        where id_produto = ?
+    `;
+
+
+    let resposta = await con.query(comando, [id]);
     let registros = resposta[0];
 
     return registros;
@@ -36,11 +54,11 @@ export async function alterarProduto(id, produto){
             set nm_produto = ?,
                 ds_produto = ?,
                 qtd_produo = ?,
-                vl_valor  = ?
-             ;  
+                vl_valor  = ? 
+             where id_produto = ?;  
     `;
     
-    let resposta = await con.query(comando, [produto.produto, produto.descricao, produto.quantidade, produto.valor])
+    let resposta = await con.query(comando, [produto.produto, produto.descricao, produto.quantidade, produto.valor, id])
     let info = resposta[0];
     
     return info.affectedRows;

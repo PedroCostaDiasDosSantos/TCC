@@ -4,9 +4,10 @@ import * as db from '../repository/produtoRepository.js';
 import {Router} from "express";
 const endpoints = Router();
 
-endpoints.get('/produto/', async (req, resp) =>{
+endpoints.get('/produto', autenticar, async (req, resp) =>{
     try{
-        let registros = await db.consultarProduto();
+        let idUsuario = req.user.id;
+        let registros = await db.consultarProduto(idUsuario);
         resp.send(registros);
     }
     catch(err){
@@ -16,10 +17,24 @@ endpoints.get('/produto/', async (req, resp) =>{
     }
 })
 
+endpoints.get('/produto/:id', autenticar, async (req, resp) =>{
+    try{
+        let id = req.params.id;
+        let registros = await db.consultarProduto(id);
+        resp.send(registros[0]);
+    }
+    catch(err){
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
 
-endpoints.post('/produto/', async (req, resp) => {
+
+endpoints.post('/produto/', autenticar, async (req, resp) => {
     try {
         let produto = req.body;
+        produto.idUsuario = req.user.id;
 
         let id = await db.inserirProduto(produto);
 
@@ -35,7 +50,7 @@ endpoints.post('/produto/', async (req, resp) => {
 })
 
 
-endpoints.put('/produto/:id', async (req, resp) => {
+endpoints.put('/produto/:id', autenticar, async (req, resp) => {
     try {
         let id = req.params.id;
         let pessoa = req.body;
@@ -56,7 +71,7 @@ endpoints.put('/produto/:id', async (req, resp) => {
 })
 
 
-endpoints.delete('/produto/:id', async (req, resp) => {
+endpoints.delete('/produto/:id', autenticar, async (req, resp) => {
     try {
         let id = req.params.id;
 

@@ -134,11 +134,11 @@ return(
 
 
   <Div1 />    
-          {/* <Div2 />    */}
+          <Div2 />   
   <Div3 /> 
       <Div4 /> 
     <Div6 /> 
-     {/* <Div5 />  
+     <Div5 />  
    <Div7 /> 
     <Div8 /> 
     <Div9 /> 
@@ -150,7 +150,7 @@ return(
     <Div15/> 
     <Div16/>  
      <Div17/>
-     <Div18/>     */}
+     <Div18/>    
     </>
 
 )
