@@ -3,23 +3,21 @@ import con from "./connection.js";
 
 export async function inserirFornecedor(pessoa) {
     const comando = `
-        insert into tb_fornecedor (nm_fornecedor, ds_cnpj, nm_produto, ds_produto) 
-					        values (?, ?, ?, ?)
+        insert into tb_fornecedor (nm_fornecedor, ds_cnpj) 
+					        values (?, ?)
     `;
     
-    let resposta = await con.query(comando, [pessoa.produto, pessoa.cnpj, pessoa.produto])
+    let resposta = await con.query(comando, [pessoa.fornecedor, pessoa.cnpj])
     let info = resposta[0];
     
     return info.insertId;
 }
 
-export async function consultarBusca(){
+export async function consultarFornecedor(){
     const comando = `
         select
            nm_fornecedor		fronecedor,
-            ds_cnpj		        cnpj,
-            nm_produto          produto,
-            ds_produto         descricao
+            ds_cnpj		        cnpj
         from tb_fornecedor
     `;
 
@@ -33,13 +31,11 @@ export async function alterarFornecedor(id, pessoa){
     const comando = `
         update tb_busca
             set nm_fornecedor = ?,
-                ds_cnpj       = ?, 
-                nm_produto    = ?,
-                ds_produto    = ?
+                ds_cnpj       = ?
             where id_fornecedor  = ?;  
     `;
     
-    let resposta = await con.query(comando, [pessoa.fronecedor, pessoa.cnpj, pessoa.produto, pessoa.pessoa, id])
+    let resposta = await con.query(comando, [pessoa.fronecedor, pessoa.cnpj, id])
     let info = resposta[0];
     
     return info.affectedRows;

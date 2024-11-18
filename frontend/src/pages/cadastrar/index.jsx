@@ -15,6 +15,7 @@ export default function Cadastrar() {
     const [descricao, setDescricao] = useState('');
     const [quantidade, setQuantidade] = useState('');
     const [valor, setValor] = useState('');
+    const [fornecedor, setFornecedor] = useState('');
 
     const navigate = useNavigate()
     const { id } = useParams();
@@ -26,16 +27,17 @@ export default function Cadastrar() {
                 "descricao": descricao,
                 "quantidade": quantidade,
                 "valor": valor,
+                "fornecedor": fornecedor
             }
     
             if (id == undefined) {
-                // CRIAR
+                
                 const url = `http://localhost:5032/produto?x-access-token=${token}`;
                 await axios.post(url, paramCorpo);
                 
                 navigate('/consultar')
             } else {
-                // ALTERAR
+                
                 const url = `http://localhost:5032/produto/${id}?x-access-token=${token}`;
                 await axios.put(url, paramCorpo);
                 
@@ -48,7 +50,7 @@ export default function Cadastrar() {
 
     async function consultar(token) {
         if (id != undefined) {
-            const url = `http://localhost:5010/produto/${id}?x-access-token=${token}`;
+            const url = `http://localhost:5032/produto/${id}?x-access-token=${token}`;
             let resp = await axios.get(url);
             let dados = resp.data;
 
@@ -108,6 +110,13 @@ export default function Cadastrar() {
                             placeholder="0.00"
                             value={valor}
                             onChange={e => setValor(e.target.value)} />
+                    </div>
+                    <div>
+                        <label>Fornecedor</label>
+                        <input
+                            type='number'
+                            value={fornecedor}
+                            onChange={e => setFornecedor(e.target.value)} />
                     </div>
                 
                     <div className='acoes-cadastrar'>

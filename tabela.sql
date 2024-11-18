@@ -19,6 +19,7 @@ id_fornecedor int,
 nm_produto varchar(250),
 ds_produto varchar(300),
 vl_valor decimal(15,2),
+qtd_produto int,
 FOREIGN KEY (id_fornecedor) REFERENCES tb_fornecedor(id_fornecedor)
 );
 
@@ -35,10 +36,7 @@ drop table tb_busca;
 create table tb_fornecedor(
 id_fornecedor int primary key auto_increment,
 nm_fornecedor varchar(100),
-ds_cnpj varchar(14),
-id_produto int,
-nm_produto varchar(200),
-ds_produto varchar(300)
+ds_cnpj varchar(14)
 );
 
 create table tb_img_compra(

@@ -3,11 +3,11 @@ import con from "./connection.js";
 
 export async function inserirProduto(produto) {
     const comando = `
-        insert into tb_adm (nm_produto, ds_produto, qtd_produto, vl_produto) 
-					        values (?, ?, ?)
+        insert into tb_adm (id_fornecedor, nm_produto, ds_produto, qtd_produto, vl_produto) 
+					        values (?, ?, ?, ?, ?)
     `;
     
-    let resposta = await con.query(comando, [produto.produto, produto.descricao, produto.quantidade, produto.valor])
+    let resposta = await con.query(comando, [produto.fornecedor, produto.produto, produto.descricao, produto.quantidade, produto.valor])
     let info = resposta[0];
     
     return info.insertId;
@@ -16,6 +16,7 @@ export async function inserirProduto(produto) {
 export async function consultarProduto(){
     const comando = `
         select id_produto       id,
+               id_fornecedor    id,
                nm_produto		produto,
                ds_produto		descricao,
                qtd_produto     quantidade,
@@ -33,6 +34,7 @@ export async function consultarProduto(){
 export async function consultarProdutoPorId(id){
     const comando = `
         select id_produto       id,
+               id_fornecedor    id,
                nm_produto		produto,
                ds_produto		descricao,
                qtd_produto     quantidade,
@@ -52,13 +54,14 @@ export async function alterarProduto(id, produto){
     const comando = `
         update tb_produto
             set nm_produto = ?,
+                id_fornecedor = ?,
                 ds_produto = ?,
                 qtd_produo = ?,
                 vl_valor  = ? 
              where id_produto = ?;  
     `;
     
-    let resposta = await con.query(comando, [produto.produto, produto.descricao, produto.quantidade, produto.valor, id])
+    let resposta = await con.query(comando, [produto.fornecedor, produto.produto, produto.descricao, produto.quantidade, produto.valor, id])
     let info = resposta[0];
     
     return info.affectedRows;
