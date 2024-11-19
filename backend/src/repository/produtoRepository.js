@@ -3,7 +3,7 @@ import con from "./connection.js";
 
 export async function inserirProduto(produto) {
     const comando = `
-        insert into tb_adm (id_fornecedor, nm_produto, ds_produto, qtd_produto, vl_produto) 
+        insert into tb_produto (id_fornecedor, nm_produto, ds_produto, qtd_produto, vl_valor) 
 					        values (?, ?, ?, ?, ?)
     `;
     

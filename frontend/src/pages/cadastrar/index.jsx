@@ -1,5 +1,4 @@
 import './index.scss'
-import Faixa from '../../components/Faixa'
 
 import axios from 'axios'
 import { useEffect, useState } from 'react'
@@ -7,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
 import Botao from '../../components/Botao';
+import Cabecalho from '../../components/Cabecalho';
 
 export default function Cadastrar() {
     const [token, setToken] = useState(null);
@@ -74,7 +74,7 @@ export default function Cadastrar() {
 
     return (
         <>
-            <Faixa/>
+            <Cabecalho/>
             <div className='pagina-cadastrar'>
                 <div className='form-cadastrar'>
                     <h2>Novo Produto</h2>

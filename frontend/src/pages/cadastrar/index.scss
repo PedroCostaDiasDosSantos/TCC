@@ -4,11 +4,12 @@
     background-color: #2D1E3D;
 
     .form-cadastrar {
-        margin-top: 12px;
+        margin-top: 80px;
         gap: 10px;
         padding: 20px;
-        padding-bottom: 158px;
+        // padding-bottom: 70px;
         width: 100%;
+        border-radius: 20px;
 
         margin-left: 50%;
         transform: translateX(-50%);
@@ -36,6 +37,8 @@
                 width: 100%;
                 padding: 5px;
                 border: 1px solid #000;
+                
+                border-radius: 15px;
             }
         }
 
