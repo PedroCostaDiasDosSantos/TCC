@@ -34,6 +34,7 @@ endpoints.get('/produto/:id', autenticar, async (req, resp) =>{
 endpoints.post('/produto/', autenticar, async (req, resp) => {
     try {
         let produto = req.body;
+        
         produto.idUsuario = req.user.id;
 
         let id = await db.inserirProduto(produto);
