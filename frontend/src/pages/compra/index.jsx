@@ -157,7 +157,7 @@ const Div16 = () => <div className="voltar">
 </div>
 
 const Div17 = () => <div className='outubro'>
-        <img src='/assets/images/rectangle.png' alt='a'/>
+        <a href="/"><img src='/assets/images/rectangle.png' alt='a'/></a>
 </div>
 
 const Div18 = () => <div className='caminhao'>  
