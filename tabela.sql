@@ -11,7 +11,8 @@ ds_senha varchar(200)
 
 insert into tb_adm(nm_login, ds_senha)
 values
-('Pedro', 1234);
+('Pedro', '1234'),
+('Nicolas', '1234');
 
 create table tb_fornecedor(
 id_fornecedor int primary key auto_increment,
