@@ -33,12 +33,12 @@ export default function Cadastrar() {
       };
 
       if (id == undefined) {
-        const url = `http://localhost:5032/produto?x-access-token=${token}`;
+        const url = `http://4.172.207.208:5032/produto?x-access-token=${token}`;
         await axios.post(url, paramCorpo);
 
         navigate("/consultar");
       } else {
-        const url = `http://localhost:5032/produto/${id}?x-access-token=${token}`;
+        const url = `http://4.172.207.208:5032/produto/${id}?x-access-token=${token}`;
         await axios.put(url, paramCorpo);
 
         navigate("/consultar");
@@ -50,7 +50,7 @@ export default function Cadastrar() {
 
   async function consultar(token) {
     if (id != undefined) {
-      const url = `http://localhost:5032/produto/${id}?x-access-token=${token}`;
+      const url = `http://4.172.207.208:5032/produto/${id}?x-access-token=${token}`;
       let resp = await axios.get(url);
       let dados = resp.data;
 

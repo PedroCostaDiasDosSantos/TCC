@@ -16,8 +16,8 @@ export default function Consultar() {
     const navigate = useNavigate();
 
     async function buscar(){
-        // const url = `http://4.172.207.208:5032/produto?x-access-token=${token}`;
-        const url = `http://localhost:5032/produto?x-access-token=${token}`;
+        const url = `http://4.172.207.208:5032/produto?x-access-token=${token}`;
+        // const url = `http://localhost:5032/produto?x-access-token=${token}`;
         let resp = await axios.get(url);
         setAdm(resp.data);
 
@@ -25,8 +25,8 @@ export default function Consultar() {
     }
 
     async function excluir(id, nome){
-        // const url =   `http://4.172.207.208:5032/produto/${id}?x-access-token=${token}`;
-        const url =   `http://localhost:5032/produto/${id}?x-access-token=${token}`;
+        const url =   `http://4.172.207.208:5032/produto/${id}?x-access-token=${token}`;
+        // const url =   `http://localhost:5032/produto/${id}?x-access-token=${token}`;
        await axios.delete(url)
 
        await buscar()

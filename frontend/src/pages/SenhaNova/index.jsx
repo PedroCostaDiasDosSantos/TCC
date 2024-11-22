@@ -24,10 +24,10 @@ export default function Senha() {
         }
     
               //  >>>> Servidor Local <<<<
-        const url = `http://localhost:5032/alterar/`
+        // const url = `http://localhost:5032/alterar/`
     
               //  >>>> Servidor do Bruno <<<<
-        // const url = `http://4.172.207.208:3064/alterar/`
+        const url = `http://4.172.207.208:5032/alterar/`
         let resp = await axios.post(url, usuario)
     
         if (resp.data.erro != undefined) {

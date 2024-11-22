@@ -22,10 +22,10 @@ export default function Login() {
     }
 
           //  >>>> Servidor Local <<<<
-    const url = `http://localhost:5032/entrar/`
+    // const url = `http://localhost:5032/entrar/`
 
           //  >>>> Servidor do Bruno <<<<
-    // const url = `http://4.172.207.208:3064/entrar/`
+    const url = `http://4.172.207.208:5032/entrar/`
     let resp = await axios.post(url, usuario)
 
     if (resp.data.erro != undefined) {
