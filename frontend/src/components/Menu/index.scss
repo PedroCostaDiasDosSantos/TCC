@@ -1,11 +1,12 @@
 /* Estilos gerais */
 .container-menu {
     display: flex;
+    
 
   }
   
   .menu-button {
-    position: fixed;
+    // position: fixed;
     top: 20px;
     left: 20px;
     z-index: 2;
@@ -37,6 +38,7 @@
   }
   
   .sidebar.open {
+    
     left: 0;
   }
   
@@ -50,6 +52,8 @@
   .sidebar ul {
     list-style: none;
     padding: 0;
+    
+    font-size: 20px;
     
     margin-top: 50px;
   }

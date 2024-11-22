@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './index.scss'
 import React, { useState, useEffect } from 'react';
+import Menu from '../../components/Menu';
 
 
 
@@ -152,11 +153,11 @@ useEffect(() => {
 </div>
 
 const Div16 = () => <div className="voltar">
-    <img className='caldeirao' src='/assets/images/Arrow right.png' alt='a' />
+    <a href="/"><img className='caldeirao' src='/assets/images/Arrow right.png' alt='a' /></a>
 </div>
 
 const Div17 = () => <div className='outubro'>
-        <a href="/"><img src='/assets/images/rectangle.png' alt='a'/></a>
+        <img src='/assets/images/rectangle.png' alt='a'/>
 </div>
 
 const Div18 = () => <div className='caminhao'>  
@@ -165,7 +166,7 @@ const Div18 = () => <div className='caminhao'>
 return(
     <>
 
-
+    <Menu/>
     <Div1 />
     <Div2 />
     <Div3 /> 

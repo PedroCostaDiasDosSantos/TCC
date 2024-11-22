@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    
     padding-left: 50px;
     padding-right: 50px;
     width: 100%;
     text-decoration: none;
+    
 
     transform: translateY(0); /* Cabeçalho começa visível */
     transition: transform 0.3s ease-in-out; /* Animação para subir/descer */
@@ -53,7 +54,7 @@
 
 #a{
     margin-top: 20px;
-    left: 0px;
+    margin-left: 0px;
 }
 
 #b{
@@ -69,7 +70,7 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-left: 90px;
+    margin-left: 150px;
 }
 .search-botao {
     padding: 10px 15px;
@@ -207,3 +208,76 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: 1024px) {
+  .linkis {
+    flex-direction: column;
+    padding-left: 90px; /* Alinha os itens verticalmente */
+    padding: 80px;
+    padding-bottom: 70px;
+ 
+ }
+ #a{ 
+     display: none; 
+}
+  #b{
+   display: none; 
+ }
+
+  #c{
+   display: none; 
+  }
+
+  #e{
+     display: none; 
+  }
+
+  #f{
+     display: none; 
+  }
+
+  #g{
+     display: none; 
+  }
+
+  #h{
+     display: none; 
+  }
+
+
+  .links {
+   width: 100%;
+   justify-content: center;
+   margin-bottom: 20px;
+ }
+
+ .search-bar {
+     width: 100%;
+     justify-content: center;
+     margin-bottom: 20px;
+   }
+
+   #buscar{
+      width: 200px;
+      margin-top: 20px;
+      margin-left: -15px;
+    }
+
+    #search-botao{
+      width: 100px;
+      margin-top: 19px;
+      margin-left: 200px;
+    }
+
+  .logo-faixa {
+    width: 120px; /* Ajusta a logo para uma largura menor */
+    margin-left: -970px;
+    margin-top: -98px;
+  }
+
+//    /* Ajusta o tamanho da barra de pesquisa */
+  .searchh {
+     margin-left: -900px;
+    width: 100%;
+    max-width: 250px; /* Garante que a barra de pesquisa não ocupe toda a largura */
+  }}
