@@ -97,6 +97,7 @@ export default function Cadastrar() {
             <div>
               <label>Produto:</label>
               <input
+              className="inputt"
                 type="text"
                 value={produto}
                 onChange={(e) => setProduto(e.target.value)}
@@ -106,6 +107,7 @@ export default function Cadastrar() {
             <div>
               <label>Descrição:</label>
               <input
+              className="inputt"
                 type="text"
                 value={descricao}
                 onChange={(e) => setDescricao(e.target.value)}
@@ -115,6 +117,7 @@ export default function Cadastrar() {
             <div>
               <label>Quantidade:</label>
               <input
+              className="inputt"
                 type="number"
                 value={quantidade}
                 onChange={(e) => setQuantidade(e.target.value)}
@@ -122,8 +125,9 @@ export default function Cadastrar() {
             </div>
 
             <div>
-              <label>Valor</label>
+              <label>Valor:</label>
               <input
+              className="inputt"
                 type="number"
                 min="0"
                 step="0.01"
@@ -134,8 +138,9 @@ export default function Cadastrar() {
             </div>
 
             <div>
-              <label>Fornecedor</label>
+              <label>Fornecedor:</label>
               <input
+                className="inputt"
                 type="number"
                 value={fornecedor}
                 onChange={(e) => setFornecedor(e.target.value)}

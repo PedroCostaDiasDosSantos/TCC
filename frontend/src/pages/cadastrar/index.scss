@@ -92,23 +92,24 @@ body {
 //         display: flex;
 //         align-items: center;
 
-//         label {
-//             display: inline-block;
-//             width: 200px;
-//             text-align: right;
-//             padding-right: 10px;
-//             font: 400 24px Arial;
-//         }
+        label {
+            display: inline-block;
+            width: 200px;
+            text-align: right;
+            padding-right: 10px;
+            font: 400 24px Arial;
+            
+        }
 
-//         input {
-//             font: 400 20px Arial;
-//             width: 250px;
-//             padding: 5px;
-//             border: 1px solid #000;
+        .inputt {
+            font: 400 20px Arial;
+            width: 250px;
+            padding: 5px; 
+            border: 1px solid #000;
 
-//             border-radius: 15px;
+            border-radius: 15px;
 
-//         }
+        }
 
 //         .botao {
 //             padding: 18px;
@@ -120,14 +121,14 @@ body {
 //         }
 //     }
 
-//     .acoes-cadastrar {
-//         display: flex;
-//         width: 100%;
-//         justify-content: end;
+    .acoes-cadastrar {
+        display: flex;
+        width: 100%;
+        justify-content: end;
 
-//         gap: 10px;
-//         margin-top: 22px;
-//     }
+        gap: 10px;
+        margin-top: 22px;
+    }
 
 //     .imagem {
 //         justify-content: center;

@@ -51,7 +51,7 @@ export default function Login() {
 
           <h1>Bem Vindo(a)</h1>
 
-          <img className='User' src='/assets/images/user.png' alt='a' />
+          <img className='User' src='/assets/images/userlogin.png' alt='a' />
 
           <div className='input-field'>
             <h3>Insira seu email ou numero de celular:</h3>
@@ -65,14 +65,15 @@ export default function Login() {
           </div>
 
           <div className='recall-forget'>
-            <label>
+            {/* <label>
               <input type='checkbox' />
               Lembre de mim
-            </label>
+            </label> */}
             <a href='/EsqueciaSenha'>Esqueceu a senha</a>
+            <button onClick={entrar}>Entrar</button>
           </div>
 
-          <button onClick={entrar}>Entrar</button>
+          
 
         </form>
         

@@ -77,6 +77,7 @@
 .nitro{
     display: flex;
     flex-direction: column;
+    justify-content: center;
    
     .gabriella{
         margin-top: 16px;
@@ -523,4 +524,15 @@
 
 #bola1{
     width: 110px;
+}
+
+
+@media (max-width: 1024px){
+    .fotos{
+        display: flex;
+        .logo{
+            width: 1480px;
+        }
+    }
+
 }

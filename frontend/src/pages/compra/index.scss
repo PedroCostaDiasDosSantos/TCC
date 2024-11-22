@@ -120,6 +120,59 @@
     }
 }
 
+.carrossel {
+    display: none; /* Inicialmente escondido */
+    width: 90%;
+    max-width: 400px; /* Limita a largura do carrossel */
+ 
+    margin-left: -50px;
+    border-radius: 20px;
+    padding: 0px;
+  
+    .carrossel-img {
+      margin-top: 32px;
+      border: 1px solid black; /* Borda preta de 2px */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave para os botões */
+      box-sizing: border-box;
+      width: 100%;
+      object-fit: cover; /* Garante que as imagens cubram bem o espaço */
+      border-radius: 8px; /* Bordas arredondadas */
+    }
+  }
+  
+  .carrossel-controls {
+    display: none; /* Inicialmente escondido */
+    position: absolute;
+    top: 85%; /* Centraliza verticalmente */
+    left: 35px;
+    right: 0;
+    transform: translateY(-50%); /* Ajusta para que as setas fiquem verticalmente centralizadas */
+  
+    display: flex;
+    justify-content: space-between; /* Distribui as setas para os lados opostos */
+    width: 43%; /* Ocupa toda a largura do carrossel */
+    right: 0;
+   
+  
+     .carrossel-btn {
+         background-color:transparent; /* Fundo semi-transparente */
+       
+         color: rgb(69, 63, 63);
+         border: 1px solid black; /* Borda preta de 2px */
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave para os botões */
+         padding: 0px;
+        
+         font-size: 15px;
+         cursor: pointer;
+         border-radius: 11%; /* Borda arredondada */
+         transition: background-color 0.3s; /* Efeito de transição para o fundo */
+  
+     &:hover {
+        background-color: rgba(121, 16, 90, 0.8); /* Cor de fundo mais escura quando o botão é hoverado */
+       }
+    }
+   }
+
 #e{
     margin-top: 120px;
     margin-left: 78px;
@@ -479,7 +532,7 @@
 
 .voltar{
     display: flex;
-    margin-top: -1030px;
+    margin-top: -1069px;
     margin-left: 30px;
 }
 
@@ -495,8 +548,8 @@
 }
 
 #vara{
-    margin-top: 820px;
-    margin-left: 8px;
+    margin-top: 865px;
+    margin-left: 5px;
     margin-bottom: 0px;
     width: 130px;
 }
@@ -508,120 +561,477 @@
      .barraa {
        flex-direction: column;
        padding-left: 90px; /* Alinha os itens verticalmente */
-       padding: 10px;
-       padding-bottom: 40px;
+       padding: 80px;
+       padding-bottom: 70px;
+    
     }
-    #aaa{
-       margin-top: 70px;
-       margin-left: 3060px;
+    #aaa{ 
+        display: none; 
+   }
+     #b{
+      display: none; 
     }
-   #b{
-       margin-top: -70px;
-       margin-left: 3078px;
-   }
   
-   #c{
-       margin-top: 48px;
-       margin-left: 3079px;
-   }
-  
- 
-    .links {
-     width: 100%;
-     justify-content: center;
-     margin-bottom: 20px;
-   }
- 
-   .search-bar {
-       width: 100%;
-       justify-content: center;
-       margin-bottom: 20px;
+     #c{
+      display: none; 
      }
 
-     #busca{
-       width: 200px;
-       margin-top: 110px;
-       margin-left: 80px;
+     #e{
+        display: none; 
      }
 
-     #busca1{
-       width: 100px;
-       margin-top: 112px;
-       margin-left: 300px;
+     #f{
+        display: none; 
      }
+
+     #g{
+        display: none; 
+     }
+
+     #h{
+        display: none; 
+     }
+  
  
-   .azeitona {
-     width: 120px; /* Ajusta a logo para uma largura menor */
-     margin-left: -880px;
-     margin-top: -20px;
-   }
- 
-   /* Ajusta o tamanho da barra de pesquisa */
-    .search-input1 {
-       margin-left: -900px;
+     .links {
       width: 100%;
-      max-width: 250px; /* Garante que a barra de pesquisa não ocupe toda a largura */
+      justify-content: center;
+      margin-bottom: 20px;
     }
  
-//     /* Ajusta os links em telas menores */
-    .linkk {
-      font-size: 14px;
-      padding: 8px;
-    }
-  
-    .nome {
-     /* Ajusta o tamanho da fonte */
+    .search-bar {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      #busca{
+         width: 200px;
+         margin-top: 20px;
+         margin-left: -15px;
+       }
+
+       #busca1{
+         width: 100px;
+         margin-top: 19px;
+         margin-left: 200px;
+       }
+ 
+     .azeitona {
+       width: 120px; /* Ajusta a logo para uma largura menor */
+       margin-left: -970px;
+       margin-top: -98px;
+     }
+ 
+//    /* Ajusta o tamanho da barra de pesquisa */
+     .search-input1 {
+        margin-left: -900px;
+       width: 100%;
+       max-width: 250px; /* Garante que a barra de pesquisa não ocupe toda a largura */
+     }
+ 
+    .nome {    
+ /* Ajusta o tamanho da fonte */
    margin-top: 20px; /* Ajusta a posição para melhor exibição em telas menores */
-   margin-left: 90px; 
-  }
+   margin-left: 80px; 
+   }
 
   #amonguisss{
-    font-size: 30px;
-    text-align: start;
+     font-size: 30px;
+     text-align: start;
+   }
+
+   .share1{
+     display: flex;
+     margin-top: 20px;
+     margin-left: 150px; 
   }
 
- .share1{
-    display: flex;
-    margin-top: 20px;
-    margin-left: 120px; 
+  .avaliacao{
+     display: flex;
+     justify-content: center;
+     margin-top: -22px;
+     margin-left: -55px;
+  }
+
+ .classificacao{
+     display: flex;
+    
+    margin-top: 26px;
+    margin-left: -475px;
  }
 
-//  .estrela{
-//     display: flex;
-//     margin-left: 0px;
-//  }
+ .aval{
+     display: flex;
+     font-size: 19px;
+     opacity: 0.7;
+ }
 
-.classificacao{
-    display: flex;
-    
-   margin-top: 30px;
-    margin-left: -465px;
-}
+ .carrossel {
+     display: block; /* Exibe o carrossel apenas em telas pequenas */
+     margin-top: -20px;
+   }
 
-.aval{
-    display: flex;
-    font-size: 19px;
-    opacity: 0.7;
-}
-}
- 
-  /* Responsividade para telas muito pequenas (como smartphones em modo retrato) */
-  @media (max-width: 480px) {
-    .search-input1 {
-      width: 80%; /* Ajusta a largura da barra de pesquisa para telas muito pequenas */
-    }
- 
-    .search-button1 {
-      width: 50%; /* Ajusta o botão de busca */
-    }
- 
-    .azeitona {
-      width: 100px; /* Reduz ainda mais o tamanho da logo */
-    }
+   .carrossel-controls {
+     display: flex; /* Exibe os controles de navegação */
+   }
+
+   .seta { 
+     flex-direction: column; /* Alinha os itens do carrossel verticalmente */
+     margin-top: 0px;
+     margin-left: 80px;
+     width: 900px;
   }
+
+   .ssetas {
+     display: none; /* Oculta as setas extras em telas pequenas */
+      }
+
+    .preco{
+        display: flex;
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 425px;
+    }  
+        #o{
+            font-size: 25px;
+        }
+
+   .fotinha{
+    display: flex;
+    position: absolute;
+    margin-top: 505px;
+    margin-left: 45px;
+   }
+
+   .botao{
+    display: flex;
+    position: absolute;
+    margin-left: 49px;
+    margin-top: 580px;
+   }
+
+   #r{
+    padding-left: 36px;
+   }
+
+   #s{
+    padding-left: 36px;
+   }
+
+   #t{
+    padding-left: 36px;
+   }
+
+   .botoes{
+    display: flex;
+    position: absolute;
+    margin-left: 28px;
+    margin-top: 630px;
+   }
+
+   #u{
+    padding-left: 36px;
+   }
+
+   #v{
+    padding-left: 36px;
+   } 
+   
+   #w{
+    padding-left: 36px;
+   }
+
+   #x{
+    padding-left: 36px;
+    margin-top: 50PX;
+   }
+
+   #y{
+    padding-left: 36px;
+    margin-top: 50PX;
+   }
+
+   #z{
+    padding-left: 36px;
+    margin-top: 50PX;
+   }
+
+   .aiaiD{
+    display: flex;
+    position: absolute;
+    margin-top: 900px;
+    padding-left: 490px;
+    padding-bottom: 410px;
+    flex-direction: column;
+   }
+
+   #link1{
+    display: none;
+   }
+
+   #link2{
+    margin-top: -40px;
+    margin-left: -282px;
+   }
+
+   #link3{
+    margin-top: 100px;
+    font-size: 20px;
+    margin-left: -277px;
+   }
+
+   #link4{
+    margin-top: 260px;
+    font-size: 20;
+    position: absolute;
+    margin-left: -286px;
+   }
+
+   .seguro{
+    display: none;
+   }
+
+   .links{
+    display: flex;
+    position: absolute;
+    margin-top: 950px;
+   }
+
+   #nautico{
+    position: absolute;
+    margin-top: 50px;
+    font-size: 14px;
+    margin-left: 210px;
+   }
+
+   #paysandu{
+    display: none;
+   }
+
+   #ibis{
+    display: none;
+   }
+
+   #crb{
+    position: absolute;
+    font-size: 15px;
+    margin-top: 89px;
+    margin-left: 45%;
+   }
+
+   #remo{
+    position: absolute;
+    margin-top: 199px;
+    margin-left: 225px;  
+   }
+
+   #pelotas{
+    position: absolute;
+    margin-top: 255px;
+    margin-left: 225px; 
+   }
+
+   .aiai{
+    display: flex;
+    position: absolute;
+    margin-top: 1310px;
+    margin-left: -699px;
+   }
+
+   #podrao{
+    position: absolute;
+    margin-top: 0.3%;
+    margin-left: -90px;
+   }
+
+   #podroes{
+    position: absolute;
+    margin-top: 0.1%;
+    margin-left: -50px;
+   }
+
+   #m3{
+   padding-right: 36px;
+    margin-top: 0.5%;
+   }
+
+   .voltar{
+    display: none;
+   }
+
+   .outubro{
+    display: none;
+   }
+
+   .caminhao{
+    display: flex;
+    position: absolute;
+    margin-top: 350px;
+    
+   }
+
+   #vara{
+    width: 150px;
+   }
+  }
+ 
+//   /* Responsividade para telas muito pequenas (como smartphones em modo retrato) */
+//   @media (max-width: 480px) {
+//     .search-input1 {
+//       width: 80%; /* Ajusta a largura da barra de pesquisa para telas muito pequenas */
+//     }
+ 
+//     .search-button1 {
+//       width: 50%; /* Ajusta o botão de busca */
+//     }
+ 
+//     .azeitona {
+//       width: 100px; /* Reduz ainda mais o tamanho da logo */
+//     }
+   
    //  .nome {
    //     font-size: 16px; /* Diminui o tamanho da fonte do título */
    //   }
+
+//   /* Responsividade para telas muito pequenas (como smartphones em modo retrato) */
+//   @media (max-width: 480px) {
+//     .search-input1 {
+//       width: 80%; /* Ajusta a largura da barra de pesquisa para telas muito pequenas */
+//     }
+
+//     .search-button1 {
+//       width: 50%; /* Ajusta o botão de busca */
+//     }
+
+//     .azeitona {
+//       width: 100px; /* Reduz ainda mais o tamanho da logo */
+//     }
+  
+  //  .nome {
+  //     font-size: 16px; /* Diminui o tamanho da fonte do título */
+  //   }
+
+
+// //   /* Responsividade para telas pequenas */
+//   @media (max-width: 1024px) {
+//      .barraa {
+//        flex-direction: column;
+//        padding-left: 90px; /* Alinha os itens verticalmente */
+//        padding: 10px;
+//        padding-bottom: 40px;
+//     }
+//     #aaa{
+//        margin-top: 70px;
+//        margin-left: 3060px;
+//     }
+//    #b{
+//        margin-top: -70px;
+//        margin-left: 3078px;
+//    }
+  
+//    #c{
+//        margin-top: 48px;
+//        margin-left: 3079px;
+//    }
+  
+ 
+//     .links {
+//      width: 100%;
+//      justify-content: center;
+//      margin-bottom: 20px;
+//    }
+ 
+//    .search-bar {
+//        width: 100%;
+//        justify-content: center;
+//        margin-bottom: 20px;
+//      }
+
+//      #busca{
+//        width: 200px;
+//        margin-top: 110px;
+//        margin-left: 80px;
+//      }
+
+//      #busca1{
+//        width: 100px;
+//        margin-top: 112px;
+//        margin-left: 300px;
+//      }
+ 
+//    .azeitona {
+//      width: 120px; /* Ajusta a logo para uma largura menor */
+//      margin-left: -880px;
+//      margin-top: -20px;
+//    }
+ 
+//    /* Ajusta o tamanho da barra de pesquisa */
+//     .search-input1 {
+//        margin-left: -900px;
+//       width: 100%;
+//       max-width: 250px; /* Garante que a barra de pesquisa não ocupe toda a largura */
+//     }
+ 
+// //     /* Ajusta os links em telas menores */
+//     .linkk {
+//       font-size: 14px;
+//       padding: 8px;
+//     }
+  
+//     .nome {
+//      /* Ajusta o tamanho da fonte */
+//    margin-top: 20px; /* Ajusta a posição para melhor exibição em telas menores */
+//    margin-left: 90px; 
+//   }
+
+//   #amonguisss{
+//     font-size: 30px;
+//     text-align: start;
+//   }
+
+//  .share1{
+//     display: flex;
+//     margin-top: 20px;
+//     margin-left: 120px; 
+//  }
+
+// //  .estrela{
+// //     display: flex;
+// //     margin-left: 0px;
+// //  }
+
+// .classificacao{
+//     display: flex;
+    
+//    margin-top: 30px;
+//     margin-left: -465px;
+// }
+
+// .aval{
+//     display: flex;
+//     font-size: 19px;
+//     opacity: 0.7;
+// }
+// }
+ 
+//   /* Responsividade para telas muito pequenas (como smartphones em modo retrato) */
+//   @media (max-width: 480px) {
+//     .search-input1 {
+//       width: 80%; /* Ajusta a largura da barra de pesquisa para telas muito pequenas */
+//     }
+ 
+//     .search-button1 {
+//       width: 50%; /* Ajusta o botão de busca */
+//     }
+ 
+//     .azeitona {
+//       width: 100px; /* Reduz ainda mais o tamanho da logo */
+//     }
+//   }
+//    //  .nome {
+//    //     font-size: 16px; /* Diminui o tamanho da fonte do título */
+//    //   }
 
  
  

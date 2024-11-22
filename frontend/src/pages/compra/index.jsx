@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import './index.scss'
-
+import React, { useState, useEffect } from 'react';
 
 
 
@@ -21,7 +21,42 @@ export default function Produtos(){
     </div>
     </div>
 
+    
+const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1024); // Verifica se a tela é pequena
+
+// Estado para controlar o índice da imagem atual
+const [currentIndex, setCurrentIndex] = useState(0);
+
+// Imagens para o carrossel
+const images = [
+  '/assets/images/imagemQ.png',
+  '/assets/images/imagemT.png',
+  '/assets/images/imagemD.png',
+  '/assets/images/imagemU.png'
+];
+
+// Função para ir à próxima imagem
+const nextImage = () => {
+  setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+};
+
+// Função para voltar para a imagem anterior
+const prevImage = () => {
+  setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+};
+
+// Função para atualizar o estado de isSmallScreen ao redimensionar a tela
+useEffect(() => {
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth <= 1024);
+  };
+
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
     const Div2 = () => <div className='seta'>
+
          <img className='um'id="e" src='/assets/images/imagemQ.png' alt='a' />
          <img className='um' id="f" src='/assets/images/imagemT.png' alt='a' />
          
@@ -61,7 +96,7 @@ export default function Produtos(){
 
     const Div7 = () => <div className='preco'>
          <h3 className='pre' id="o">R$ 930,99 no Pix</h3>
-         <h4 className='co' id="p">ou <span className='destaque'>R$ 979,99</span> em até <span className='destaque'>9x</span> sem juros</h4>
+         <h4 className='co' id="o">ou <span className='destaque'>R$ 979,99</span> em até <span className='destaque'>9x</span> sem juros</h4>
          </div>
 
     const Div8 = () => <div className='fotinha'>
@@ -113,7 +148,7 @@ export default function Produtos(){
   const Div15 = () => <div className='aiai'>
   <a href='#'> <img className='caldo' id="podrao" src='/assets/images/Phone.png' alt='a' /></a>
   <a href='#'> <img className='caldo' id="podroes"src='/assets/images/mail.png' alt='a' /></a>
-  <a href='#'> <img className='caldo' id="3" src='/assets/images/Instagram.png' alt='a' /></a>
+  <a href='#'> <img className='caldo' id="m3" src='/assets/images/Instagram.png' alt='a' /></a>
 </div>
 
 const Div16 = () => <div className="voltar">
@@ -122,8 +157,6 @@ const Div16 = () => <div className="voltar">
 
 const Div17 = () => <div className='outubro'>
         <a href="/"><img src='/assets/images/rectangle.png' alt='a'/></a>
-
-      
 </div>
 
 const Div18 = () => <div className='caminhao'>  
@@ -133,13 +166,13 @@ return(
     <>
 
 
-  <Div1 />    
-          <Div2 />   
-  <Div3 /> 
-      <Div4 /> 
+    <Div1 />
+    <Div2 />
+    <Div3 /> 
+    <Div4 /> 
     <Div6 /> 
-     <Div5 />  
-   <Div7 /> 
+    <Div5 /> 
+    <Div7 /> 
     <Div8 /> 
     <Div9 /> 
     <Div10/> 
@@ -149,8 +182,41 @@ return(
     <Div14/> 
     <Div15/> 
     <Div16/>  
-     <Div17/>
-     <Div18/>    
+    <Div17/>
+    <Div18/>
+
+<div className="seta">
+      {/* Mostrar o carrossel apenas em telas pequenas */}
+      {isSmallScreen && (
+        <div className="carrossel">
+          <img
+            className="carrossel-img"
+            src={images[currentIndex]}
+            alt={`Imagem ${currentIndex + 1}`}
+          />
+        </div>
+      )}
+
+      {/* Apenas visível em telas pequenas (controles do carrossel) */}
+      {isSmallScreen && (
+        <div className="carrossel-controls">
+          <button className="carrossel-btn prev" onClick={prevImage}>
+            &lt;
+          </button>
+          <button className="carrossel-btn next" onClick={nextImage}>
+            &gt;
+          </button>
+        </div>
+      )}
+
+      {/* Mostrar as imagens estáticas apenas em telas grandes */}
+      {!isSmallScreen && (
+        <div className="ssetas">
+          <img className="do" id="g" src="/assets/images/imagemD.png" alt="Imagem D" />
+          <img className="do" id="h" src="/assets/images/imagemU.png" alt="Imagem U" />
+        </div>
+      )}
+    </div>
     </>
 
 )

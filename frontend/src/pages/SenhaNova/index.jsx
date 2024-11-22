@@ -53,7 +53,7 @@ export default function Senha() {
                 <form className='senha-form' >
                     <h1 className='h1-senha'>Alterar sua Senha</h1>
 
-                    <img className='usuario' src='/assets/images/user.png' alt='a' />
+                    <img className='usuario' src='/assets/images/userlogin.png' alt='a' />
 
 
                     <div className='input-field'>
